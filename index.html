@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Weber County Hive — Master Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Serif+4:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#faf7ef;
+    --paper-card-2:#f0ecdf;
+    --ink:#1c1c1a;
+    --ink-dim:#5b5850;
+    --ink-dimmer:#8c8878;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --teal:#2e5f5a;
+    --blue:#3a5f7d;
+    --border:#ddd6c4;
+    --hive-dark:#17130c;
+    --hive-dark-2:#2a2013;
+    --gold:#d4af37;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', serif;
+    line-height:1.5;
+  }
+
+  /* ===== HIVE HERO ===== */
+  .hive-hero{
+    position:relative;
+    background:linear-gradient(160deg, var(--hive-dark-2) 0%, var(--hive-dark) 70%);
+    padding:90px 24px 110px;
+    overflow:hidden;
+    text-align:center;
+    border-bottom:4px solid var(--gold);
+  }
+  .hive-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:0.16;
+    background-image:
+      linear-gradient(30deg, var(--gold) 12%, transparent 12.5%, transparent 87%, var(--gold) 87.5%, var(--gold)),
+      linear-gradient(150deg, var(--gold) 12%, transparent 12.5%, transparent 87%, var(--gold) 87.5%, var(--gold)),
+      linear-gradient(30deg, var(--gold) 12%, transparent 12.5%, transparent 87%, var(--gold) 87.5%, var(--gold)),
+      linear-gradient(150deg, var(--gold) 12%, transparent 12.5%, transparent 87%, var(--gold) 87.5%, var(--gold)),
+      linear-gradient(60deg, #77571f 25%, transparent 25.5%, transparent 75%, #77571f 75%, #77571f),
+      linear-gradient(60deg, #77571f 25%, transparent 25.5%, transparent 75%, #77571f 75%, #77571f);
+    background-size:44px 76px;
+    background-position:0 0, 0 0, 22px 38px, 22px 38px, 0 0, 22px 38px;
+    mask-image:radial-gradient(ellipse at center, black 0%, transparent 75%);
+    pointer-events:none;
+  }
+  .hex-mark{
+    position:relative;
+    width:96px; height:96px;
+    margin:0 auto 22px;
+  }
+  .hex-mark svg{width:100%; height:100%;}
+  .hive-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:3px;
+    color:#c9a96a;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    position:relative;
+  }
+  .hive-title{
+    font-family:'Playfair Display', serif;
+    font-weight:800;
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    color:var(--gold);
+    letter-spacing:0.5px;
+    position:relative;
+    margin-bottom:10px;
+  }
+  .hive-title .small{
+    display:block;
+    font-size:0.32em;
+    font-weight:700;
+    color:#e8dbb5;
+    letter-spacing:6px;
+    margin-top:6px;
+  }
+  .hive-sub{
+    position:relative;
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:1.05rem;
+    color:#cbb98c;
+    max-width:560px;
+    margin:0 auto;
+  }
+
+  /* ===== BODY ===== */
+  .wrap{max-width:1180px;margin:0 auto;padding:56px 24px 100px;}
+  .intro{
+    text-align:center;
+    max-width:680px;
+    margin:0 auto 48px;
+  }
+  .intro h2{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .intro p{
+    color:var(--ink-dim);
+    font-size:1rem;
+  }
+
+  /* ===== HONEYCOMB CARD GRID ===== */
+  .comb{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:22px;
+  }
+  .comb-row-offset{margin-top:34px;}
+
+  .card{
+    background:var(--paper-card);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:26px 24px 22px;
+    position:relative;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 28px rgba(28,24,20,0.12);
+  }
+  .card-badge{
+    width:38px; height:38px;
+    margin-bottom:4px;
+  }
+  .card-badge svg{width:100%; height:100%;}
+  .card-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--ink-dimmer);
+  }
+  .card h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.25rem;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.25;
+  }
+  .card p{
+    color:var(--ink-dim);
+    font-size:0.92rem;
+    flex-grow:1;
+  }
+  .card a.card-link{
+    align-self:flex-start;
+    margin-top:10px;
+    font-family:'Inter', sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--rust);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .card a.card-link:hover{border-bottom-color:var(--rust);}
+  .bee-icon{
+    width:14px; height:14px;
+    display:inline-block;
+    flex-shrink:0;
+    opacity:0.85;
+  }
+
+  footer{
+    text-align:center;
+    padding:50px 24px 60px;
+    color:var(--ink-dimmer);
+    font-family:'Inter', sans-serif;
+    font-size:0.82rem;
+  }
+  .footer-hive{
+    width:34px; height:34px;
+    margin:0 auto 16px;
+    opacity:0.55;
+  }
+  footer a{
+    color:var(--rust);
+    text-decoration:none;
+    font-weight:600;
+  }
+  footer a:hover{text-decoration:underline;}
+  footer .footer-sub{
+    margin-top:6px;
+    font-size:0.78rem;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hive-hero">
+    <div class="hex-mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hexFill" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8c766"/>
+            <stop offset="55%" stop-color="#d4af37"/>
+            <stop offset="100%" stop-color="#9c7620"/>
+          </linearGradient>
+          <filter id="hexShadow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.45"/>
+          </filter>
+        </defs>
+        <polygon points="50,3 93,26 93,74 50,97 7,74 7,26"
+          fill="url(#hexFill)" stroke="#1a1508" stroke-width="2" filter="url(#hexShadow)"/>
+        <polygon points="50,14 84,32.5 84,67.5 50,86 16,67.5 16,32.5"
+          fill="none" stroke="#1a1508" stroke-width="1" stroke-opacity="0.35"/>
+        <!-- bee -->
+        <g transform="translate(50,55)">
+          <!-- wings -->
+          <ellipse cx="-13" cy="-14" rx="11" ry="16" fill="rgba(250,247,239,0.65)" stroke="#1a1508" stroke-width="1.2" transform="rotate(-18 -13 -14)"/>
+          <ellipse cx="13" cy="-14" rx="11" ry="16" fill="rgba(250,247,239,0.65)" stroke="#1a1508" stroke-width="1.2" transform="rotate(18 13 -14)"/>
+          <!-- body -->
+          <defs>
+            <clipPath id="beeBody"><ellipse cx="0" cy="4" rx="14" ry="17"/></clipPath>
+          </defs>
+          <ellipse cx="0" cy="4" rx="14" ry="17" fill="#f2c94c" stroke="#1a1508" stroke-width="2"/>
+          <g clip-path="url(#beeBody)">
+            <rect x="-16" y="-6" width="32" height="4.2" fill="#1a1508"/>
+            <rect x="-16" y="3" width="32" height="4.2" fill="#1a1508"/>
+            <rect x="-16" y="12" width="32" height="4.2" fill="#1a1508"/>
+          </g>
+          <ellipse cx="0" cy="4" rx="14" ry="17" fill="none" stroke="#1a1508" stroke-width="2"/>
+          <!-- head -->
+          <circle cx="0" cy="-16" r="7.5" fill="#1a1508"/>
+          <!-- antennae -->
+          <path d="M-4,-22 C-7,-28 -9,-30 -8,-33" stroke="#1a1508" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M4,-22 C7,-28 9,-30 8,-33" stroke="#1a1508" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <circle cx="-8" cy="-33" r="1.8" fill="#1a1508"/>
+          <circle cx="8" cy="-33" r="1.8" fill="#1a1508"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hive-eyebrow">Weber County Hive · Master Index</div>
+    <h1 class="hive-title">THE HIVE
+      <span class="small">EVERY THREAD, ONE HOME</span>
+    </h1>
+    <p class="hive-sub">Every investigation, docket, and interactive built by The Weber County Hive — one place to find any of it.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="intro">
+      <h2>Browse by project</h2>
+      <p>Each card opens that project's own index — the full list of published pieces lives there.</p>
+    </div>
+
+    <div class="comb" id="repo-grid"></div>
+  </div>
+
+  <footer>
+    <svg class="footer-hive" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,6 90,28 90,72 50,94 10,72 10,28"
+        fill="none" stroke="var(--ink-dimmer)" stroke-width="3"/>
+    </svg>
+    <div>Read the full investigations on <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive Substack →</a></div>
+    <div class="footer-sub">Public records, primary sources, no speculation.</div>
+  </footer>
+
+<script src="weber-hive-master-data.js"></script>
+<script>
+const grid = document.getElementById('repo-grid');
+REPOS.forEach((r, i) => {
+  const card = document.createElement('div');
+  card.className = 'card' + (i % 2 === 1 ? ' comb-row-offset' : '');
+  card.innerHTML = `
+    <div class="card-badge">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="${r.color}" stroke="#1a1508" stroke-width="2.5"/>
+        <g transform="translate(50,56)">
+          <ellipse cx="-12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(-18 -12 -13)"/>
+          <ellipse cx="12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(18 12 -13)"/>
+          <defs>
+            <clipPath id="beeBody${i}"><ellipse cx="0" cy="4" rx="12.5" ry="15"/></clipPath>
+          </defs>
+          <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="#f2c94c" stroke="#1a1508" stroke-width="1.6"/>
+          <g clip-path="url(#beeBody${i})">
+            <rect x="-14" y="-5" width="28" height="3.7" fill="#1a1508"/>
+            <rect x="-14" y="2.6" width="28" height="3.7" fill="#1a1508"/>
+            <rect x="-14" y="10.2" width="28" height="3.7" fill="#1a1508"/>
+          </g>
+          <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="none" stroke="#1a1508" stroke-width="1.6"/>
+          <circle cx="0" cy="-14" r="6.6" fill="#1a1508"/>
+          <path d="M-3.5,-19.5 C-6,-24.5 -8,-26.5 -7,-29" stroke="#1a1508" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M3.5,-19.5 C6,-24.5 8,-26.5 7,-29" stroke="#1a1508" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="card-eyebrow">Weber County Hive</div>
+    <h3>${r.title}</h3>
+    <p>${r.desc}</p>
+    <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+      <svg class="bee-icon" viewBox="0 0 24 24" fill="none">
+        <ellipse cx="12" cy="13" rx="6" ry="7" fill="#c0572e"/>
+        <path d="M6.5 10h11M6.2 13h11.6M7 16h10" stroke="#faf7ef" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      Open project →
+    </a>
+  `;
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>
