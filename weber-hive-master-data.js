@@ -15,5 +15,5 @@ const REPOS = [
   { title:"Candidates 2026", desc:"Profiles of candidates running for office in the 2026 election cycle.", url:"https://weber-county-hive.github.io/candidates2026/", color:"#38356b" },
   { title:"Great Salt Lake", desc:"Great Salt Lake coverage — legislation, mining interests, and the fight over the lake's future.", url:"https://weber-county-hive.github.io/Great-Salt-Lake/", color:"#1a6b8f" },
   { title:"PAC Money-Flow Ledger", desc:"Interactive campaign-finance visualization tracing how PAC money moves through Utah politics.", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/", color:"#8a5a2e" },
-  { title:"County Officials", desc:"Profiles of sitting county-level officials across Utah — board seats, campaign finance, and the networks behind them.", url:"https://weber-county-hive.github.io/County-Officials/", color:"#5c1a2b" },
+  { title:"County Officials", desc:"Profiles of sitting county-level officials across Utah — board seats, campaign finance, and the networks behind them.", url:"https://webercountyhive-coder.github.io/countyofficials/", color:"#5c1a2b" },
 ];
