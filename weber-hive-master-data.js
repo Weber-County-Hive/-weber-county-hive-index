@@ -1,7 +1,6 @@
 // ===== WEBER COUNTY HIVE — MASTER INDEX DATA =====
 // One entry per repo. To add a new repo/project, add one object here.
 // Nothing else on the page needs to change.
-
 const REPOS = [
   { title:"Transparency", desc:"Cross-official accountability and enforcement comparisons — how different cases and officials are (or aren't) held to the same standard.", url:"https://weber-county-hive.github.io/Transparency/", color:"#3a5f7d" },
   { title:"Bill-Tracker", desc:"The legislative bill docket — case files tracking individual bills through the Utah Legislature.", url:"https://weber-county-hive.github.io/Bill-Tracker/", color:"#2e5f5a" },
@@ -19,4 +18,7 @@ const REPOS = [
   { title:"County Officials", desc:"Profiles of sitting county-level officials across Utah — board seats, campaign finance, and the networks behind them.", url:"https://webercountyhive-coder.github.io/countyofficials/", color:"#5c1a2b" },
   { title:"Follow the Deed", desc:"Who's actually behind a piece of Utah land, once you trace the LLCs, the registered agents, and the state paperwork all the way down.", url:"https://weber-county-hive.github.io/followthedeed/", color:"#0B2545" },
   { title:"Unelected Power", desc:"Utah officials who hold appointed, not elected, positions — how they got there, and any prior elected-office history.", url:"https://weber-county-hive.github.io/Unelected-Power/", color:"#7a1f3d" },
+  { title:"Utah House", desc:"Representative-by-representative profiles: committee seats, voting record, disclosed conflicts, and where public record and public messaging line up — or don't.", url:"https://weber-county-hive.github.io/Utah-House/", color:"#2c4a6b" },
+  { title:"Both Sides of the Table", desc:"The same firm planning what gets built and certifying it was built right. The same developer network winning a county override, then funding the fight against the city that override helped create. Case files on people and firms who sit on more than one side of a public decision.", url:"https://weber-county-hive.github.io/bothsidesofthetable/", color:"#6b3a1f" },
+  { title:"County Watch", desc:"County-by-county coverage across Utah — case files organized by where they happened, added as new deals and decisions surface in each county.", url:"https://weber-county-hive.github.io/countywatch/", color:"#3d5c3d" },
 ];
