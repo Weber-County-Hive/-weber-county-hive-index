@@ -4,7 +4,7 @@
 const REPOS = [
   { title:"Transparency", desc:"Cross-official accountability and enforcement comparisons — how different cases and officials are (or aren't) held to the same standard.", url:"https://weber-county-hive.github.io/Transparency/", color:"#3a5f7d" },
   { title:"Bill-Tracker", desc:"The legislative bill docket — case files tracking individual bills through the Utah Legislature.", url:"https://weber-county-hive.github.io/Bill-Tracker/", color:"#2e5f5a" },
-  { title:"PIDS-Utah", desc:"\u201cPID's: What is the Real Cost?\u201d — Public Infrastructure Districts and what they actually cost homeowners.", url:"https://weber-county-hive.github.io/PIDS-Utah/", color:"#1e2f4d" },
+  { title:"PIDS-Utah", desc:"“PID's: What is the Real Cost?” — Public Infrastructure Districts and what they actually cost homeowners.", url:"https://weber-county-hive.github.io/PIDS-Utah/", color:"#1e2f4d" },
   { title:"Committees", desc:"Legislative committee tracker — who sits where, and what that overlap means.", url:"https://weber-county-hive.github.io/committees/", color:"#1f4d2f" },
   { title:"UIPA", desc:"Utah Inland Port Authority coverage — Little Mountain Service Area, the wetlands warning story, and a general UIPA explainer.", url:"https://webercountyhive-coder.github.io/UIPA/", color:"#7a4a1f" },
   { title:"Data-Centers", desc:"Data center legislation and impact — SB 114, HB 77, DEQ and GOED initiatives, and the full bills docket.", url:"https://webercountyhive-coder.github.io/Data-Centers/", color:"#142a2c" },
@@ -21,4 +21,7 @@ const REPOS = [
   { title:"Utah House", desc:"Representative-by-representative profiles: committee seats, voting record, disclosed conflicts, and where public record and public messaging line up — or don't.", url:"https://weber-county-hive.github.io/Utah-House/", color:"#2c4a6b" },
   { title:"Both Sides of the Table", desc:"The same firm planning what gets built and certifying it was built right. The same developer network winning a county override, then funding the fight against the city that override helped create. Case files on people and firms who sit on more than one side of a public decision.", url:"https://weber-county-hive.github.io/bothsidesofthetable/", color:"#6b3a1f" },
   { title:"County Watch", desc:"County-by-county coverage across Utah — case files organized by where they happened, added as new deals and decisions surface in each county.", url:"https://weber-county-hive.github.io/countywatch/", color:"#3d5c3d" },
+  { title:"Audits", desc:"Primary-source state and county audits — what each one found, who was in charge, and whether anyone fixed it.", url:"https://weber-county-hive.github.io/audits/", color:"#4d3a1f" },
+  { title:"PAC", desc:"A case-by-case accounting of Utah political action committees — who runs them, who funds them, and where the money actually goes.", url:"https://weber-county-hive.github.io/pac/", color:"#5c2e5c" },
+  { title:"Education", desc:"District-by-district tracking of Utah school technology contracts, AI vendor deployments, and student data privacy: which districts have signed what, and who's minding the data.", url:"https://weber-county-hive.github.io/Education/", color:"#1f5c5c" },
 ];
