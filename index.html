@@ -120,29 +120,53 @@
   /* ===== HONEYCOMB CARD GRID ===== */
   .comb{
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
-    gap:22px;
+    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+    gap:16px;
   }
-  .comb-row-offset{margin-top:34px;}
+
+  /* ===== SEARCH ===== */
+  .search-row{max-width:620px;margin:0 auto 40px;display:flex;gap:10px;align-items:center;}
+  .search-row input{flex:1;font-family:'Inter',sans-serif;font-size:1rem;padding:12px 16px;border:1px solid var(--border);border-radius:6px;background:var(--paper-card);color:var(--ink);}
+  .search-row input:focus{outline:2px solid var(--amber);outline-offset:1px;}
+  .search-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dimmer);white-space:nowrap;}
+  .no-results{text-align:center;color:var(--ink-dim);padding:30px 0;display:none;}
+
+  /* ===== LATEST STRIP ===== */
+  .latest{margin-bottom:52px;}
+  .shelf-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:18px;}
+  .shelf-head h2{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--ink);}
+  .shelf-head .shelf-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dimmer);letter-spacing:.5px;}
+  .latest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;}
+  .latest-card{display:flex;flex-direction:column;gap:6px;background:var(--hive-dark);color:#efe6cc;border-radius:6px;padding:16px 16px 14px;text-decoration:none;border-top:3px solid var(--gold);transition:transform .15s ease;}
+  .latest-card:hover{transform:translateY(-3px);}
+  .latest-card .lc-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#c9a96a;}
+  .latest-card .lc-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;line-height:1.3;color:#fff;flex-grow:1;}
+  .latest-card .lc-go{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:var(--gold);}
+
+  /* ===== SHELVES ===== */
+  .shelf{margin-bottom:46px;}
 
   .card{
     background:var(--paper-card);
     border:1px solid var(--border);
     border-radius:6px;
-    padding:26px 24px 22px;
+    padding:18px 18px 16px;
+    text-decoration:none;
+    color:inherit;
     position:relative;
     transition:transform 0.15s ease, box-shadow 0.15s ease;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:6px;
   }
   .card:hover{
     transform:translateY(-3px);
     box-shadow:0 10px 28px rgba(28,24,20,0.12);
   }
+  .card-top{display:flex;align-items:center;gap:10px;}
   .card-badge{
-    width:38px; height:38px;
-    margin-bottom:4px;
+    width:30px; height:30px;
+    flex-shrink:0;
   }
   .card-badge svg{width:100%; height:100%;}
   .card-eyebrow{
@@ -154,19 +178,25 @@
   }
   .card h3{
     font-family:'Playfair Display', serif;
-    font-size:1.25rem;
+    font-size:1.1rem;
     font-weight:700;
     color:var(--ink);
     line-height:1.25;
   }
   .card p{
     color:var(--ink-dim);
-    font-size:0.92rem;
-    flex-grow:1;
+    font-size:0.88rem;
+    line-height:1.5;
+    max-height:4.5em;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
   }
-  .card a.card-link{
+  .card .card-link{
     align-self:flex-start;
-    margin-top:10px;
+    margin-top:auto;
+    padding-top:10px;
     font-family:'Inter', sans-serif;
     font-size:0.82rem;
     font-weight:600;
@@ -177,7 +207,13 @@
     align-items:center;
     gap:6px;
   }
-  .card a.card-link:hover{border-bottom-color:var(--rust);}
+  .card:hover .card-link{border-bottom-color:var(--rust);}
+  @media (max-width:560px){
+    .hive-hero{padding:60px 20px 70px;}
+    .wrap{padding:36px 16px 70px;}
+    .search-row{flex-direction:column;align-items:stretch;}
+    .search-count{text-align:right;}
+  }
   .bee-icon{
     width:14px; height:14px;
     display:inline-block;
@@ -262,12 +298,23 @@
   </div>
 
   <div class="wrap">
-    <div class="intro">
-      <h2>Browse by project</h2>
-      <p>Each card opens that project's own index — the full list of published pieces lives there.</p>
+    <div class="search-row">
+      <input type="search" id="hive-search" placeholder="Search projects and new case files — try Meta, PID, Schultz…" aria-label="Search projects and case files">
+      <span class="search-count" id="search-count"></span>
     </div>
 
-    <div class="comb" id="repo-grid"></div>
+    <section class="latest" id="latest">
+      <div class="shelf-head"><h2>Latest case files</h2><span class="shelf-note">NEWEST FIRST</span></div>
+      <div class="latest-grid" id="latest-grid"></div>
+    </section>
+
+    <div class="intro">
+      <h2>Browse by project</h2>
+      <p>Each card opens that project's own index, where the full list of published pieces lives.</p>
+    </div>
+
+    <div id="shelves"></div>
+    <p class="no-results" id="no-results">Nothing matches that search. Try a shorter word.</p>
   </div>
 
   <footer>
@@ -279,48 +326,99 @@
     <div class="footer-sub">Public records, primary sources, no speculation.</div>
   </footer>
 
-<script src="weber-hive-master-data.js"></script>
+<script src="weber-hive-master-data.js?v=2"></script>
 <script>
-const grid = document.getElementById('repo-grid');
-REPOS.forEach((r, i) => {
-  const card = document.createElement('div');
-  card.className = 'card' + (i % 2 === 1 ? ' comb-row-offset' : '');
-  card.innerHTML = `
-    <div class="card-badge">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="${r.color}" stroke="#1a1508" stroke-width="2.5"/>
-        <g transform="translate(50,56)">
-          <ellipse cx="-12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(-18 -12 -13)"/>
-          <ellipse cx="12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(18 12 -13)"/>
-          <defs>
-            <clipPath id="beeBody${i}"><ellipse cx="0" cy="4" rx="12.5" ry="15"/></clipPath>
-          </defs>
-          <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="#f2c94c" stroke="#1a1508" stroke-width="1.6"/>
-          <g clip-path="url(#beeBody${i})">
-            <rect x="-14" y="-5" width="28" height="3.7" fill="#1a1508"/>
-            <rect x="-14" y="2.6" width="28" height="3.7" fill="#1a1508"/>
-            <rect x="-14" y="10.2" width="28" height="3.7" fill="#1a1508"/>
-          </g>
-          <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="none" stroke="#1a1508" stroke-width="1.6"/>
-          <circle cx="0" cy="-14" r="6.6" fill="#1a1508"/>
-          <path d="M-3.5,-19.5 C-6,-24.5 -8,-26.5 -7,-29" stroke="#1a1508" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M3.5,-19.5 C6,-24.5 8,-26.5 7,-29" stroke="#1a1508" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        </g>
-      </svg>
-    </div>
-    <div class="card-eyebrow">Weber County Hive</div>
-    <h3>${r.title}</h3>
-    <p>${r.desc}</p>
-    <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
-      <svg class="bee-icon" viewBox="0 0 24 24" fill="none">
-        <ellipse cx="12" cy="13" rx="6" ry="7" fill="#c0572e"/>
-        <path d="M6.5 10h11M6.2 13h11.6M7 16h10" stroke="#faf7ef" stroke-width="1.4" stroke-linecap="round"/>
-      </svg>
-      Open project →
-    </a>
-  `;
-  grid.appendChild(card);
+const SHELVES = [
+  { key:"money",       title:"Money & Elections",       note:"CAMPAIGNS, PACS, DONORS" },
+  { key:"legislature", title:"The Legislature",         note:"BILLS, COMMITTEES, LAWMAKERS, TAXES" },
+  { key:"land",        title:"Land, Water & Energy",    note:"DEVELOPMENT, THE LAKE, DATA CENTERS" },
+  { key:"oversight",   title:"Oversight & Power",       note:"WHO DECIDES, AND WHO CHECKS THEM" },
+  { key:"life",        title:"Everyday Life & Basics",  note:"SCHOOLS, SURVEILLANCE, HOW IT ALL WORKS" }
+];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function bee(color, id){
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <polygon points="50,4 92,27 92,73 50,96 8,73 8,27" fill="${color}" stroke="#1a1508" stroke-width="2.5"/>
+    <g transform="translate(50,56)">
+      <ellipse cx="-12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(-18 -12 -13)"/>
+      <ellipse cx="12" cy="-13" rx="9.5" ry="13.5" fill="rgba(255,255,255,0.55)" stroke="#1a1508" stroke-width="1" transform="rotate(18 12 -13)"/>
+      <defs><clipPath id="beeBody${id}"><ellipse cx="0" cy="4" rx="12.5" ry="15"/></clipPath></defs>
+      <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="#f2c94c" stroke="#1a1508" stroke-width="1.6"/>
+      <g clip-path="url(#beeBody${id})">
+        <rect x="-14" y="-5" width="28" height="3.7" fill="#1a1508"/>
+        <rect x="-14" y="2.6" width="28" height="3.7" fill="#1a1508"/>
+        <rect x="-14" y="10.2" width="28" height="3.7" fill="#1a1508"/>
+      </g>
+      <ellipse cx="0" cy="4" rx="12.5" ry="15" fill="none" stroke="#1a1508" stroke-width="1.6"/>
+      <circle cx="0" cy="-14" r="6.6" fill="#1a1508"/>
+    </g>
+  </svg>`;
+}
+
+// Latest strip
+const latestGrid = document.getElementById('latest-grid');
+const latestCards = (typeof LATEST !== 'undefined' ? LATEST : []).map(e => {
+  const a = document.createElement('a');
+  a.className = 'latest-card';
+  a.href = e.url;
+  a.innerHTML = `<div class="lc-meta">${esc(e.project)} · ${esc(e.date)}</div>
+    <div class="lc-title">${esc(e.title)}</div>
+    <div class="lc-go">Read the case file →</div>`;
+  a.dataset.hay = [e.title, e.project, ...(e.tags||[])].join(' ').toLowerCase();
+  latestGrid.appendChild(a);
+  return a;
 });
+if (!latestCards.length) document.getElementById('latest').style.display = 'none';
+
+// Shelves
+const shelvesEl = document.getElementById('shelves');
+const repoCards = [];
+const shelfEls = [];
+SHELVES.forEach(sh => {
+  const items = REPOS.filter(r => (r.group || 'oversight') === sh.key);
+  if (!items.length) return;
+  const sec = document.createElement('section');
+  sec.className = 'shelf';
+  sec.innerHTML = `<div class="shelf-head"><h2>${sh.title}</h2><span class="shelf-note">${sh.note}</span></div><div class="comb"></div>`;
+  const grid = sec.querySelector('.comb');
+  items.forEach(r => {
+    const i = repoCards.length;
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.href = r.url;
+    card.innerHTML = `
+      <div class="card-top"><div class="card-badge">${bee(r.color, i)}</div><h3>${esc(r.title)}</h3></div>
+      <p>${esc(r.desc)}</p>
+      <span class="card-link">Open project →</span>`;
+    card.dataset.hay = [r.title, r.desc].join(' ').toLowerCase();
+    grid.appendChild(card);
+    repoCards.push(card);
+  });
+  shelvesEl.appendChild(sec);
+  shelfEls.push(sec);
+});
+
+// Search
+const input = document.getElementById('hive-search');
+const countEl = document.getElementById('search-count');
+function runSearch(){
+  const q = input.value.trim().toLowerCase();
+  let shown = 0;
+  [...latestCards, ...repoCards].forEach(c => {
+    const hit = !q || c.dataset.hay.includes(q);
+    c.style.display = hit ? '' : 'none';
+    if (hit) shown++;
+  });
+  shelfEls.forEach(s => {
+    s.style.display = [...s.querySelectorAll('.card')].some(c => c.style.display !== 'none') ? '' : 'none';
+  });
+  const latestVisible = latestCards.some(c => c.style.display !== 'none');
+  document.getElementById('latest').style.display = latestVisible ? '' : 'none';
+  document.getElementById('no-results').style.display = shown ? 'none' : 'block';
+  countEl.textContent = q ? shown + ' match' + (shown === 1 ? '' : 'es') : (REPOS.length + ' projects');
+}
+input.addEventListener('input', runSearch);
+runSearch();
 </script>
 </body>
 </html>
