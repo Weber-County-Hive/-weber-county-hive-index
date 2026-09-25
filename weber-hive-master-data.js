@@ -7,11 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"Letters & Essays to the Collective — New Section", project:"Collective", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", tags:["essays","letters","from the publisher"] },
+  { title:"Case 32: Loubet vs. Oates (HD-27) — Where the Money Comes From", project:"Candidates 2026", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/candidates2026/hd27-loubet-oates.html", tags:["HD-27","Loubet","House GOP PACs"] },
   { title:"Meta in Eagle Mountain, Part 2: The Plant Not in the Announcement", project:"Data-Centers", date:"Sep 23, 2026", url:"https://webercountyhive-coder.github.io/Data-Centers/meta-eagle-mountain-gas-plant.html", tags:["Meta","gas plant","PSC","SB 132"] },
   { title:"Meta in Eagle Mountain, Part 1: The Deal That Started Under Another Name", project:"Data-Centers", date:"Sep 23, 2026", url:"https://webercountyhive-coder.github.io/Data-Centers/weber-hive-dc-meta-eagle-mountain.html", tags:["Meta","tax breaks","water","Stadion"] },
   { title:"Case 22: Bitner vs. Last (HD-17) — Two Filings, Two Numbers", project:"Candidates 2026", date:"Sep 23, 2026", url:"https://weber-county-hive.github.io/candidates2026/hd17-bitner-last.html", tags:["HD-17","Bitner","CMV PAC"] },
   { title:"Case 21: Tran vs. Neal (SD-6) — The Deciding Vote", project:"Candidates 2026", date:"Sep 23, 2026", url:"https://weber-county-hive.github.io/candidates2026/sd6-tran-neal.html", tags:["SD-6","Tran","Meta PAC"] },
-  { title:"36 Endorsed. 13 Paid Who Weren't. — The Doers Network", project:"PAC", date:"Sep 23, 2026", url:"https://weber-county-hive.github.io/pac/weber-hive-doers-network.html", tags:["Doers Network","All In For Utah"] },
 ];
 
 const REPOS = [
@@ -39,4 +40,5 @@ const REPOS = [
   { title:"Education", desc:"District-by-district tracking of Utah school technology contracts, AI vendor deployments, and student data privacy: which districts have signed what, and who's minding the data.", url:"https://weber-county-hive.github.io/Education/", color:"#1f5c5c", group:"life" },
   { title:"Public Lands", desc:"How public land, minerals and water rights change hands in Utah — explainers and case files, starting with how a public parcel becomes private.", url:"https://weber-county-hive.github.io/public-lands/", color:"#6b5a2e", group:"land" },
   { title:"Referendums", desc:"Citizen referendum efforts against city and county decisions across Utah — filings, legal deadlines and disputes over required materials. Includes Eagle Mountain's tax referendums and the Stratos data center referendum.", url:"https://webercountyhive-coder.github.io/referendum/", color:"#2f4f6b", group:"oversight" },
+  { title:"Letters & Essays to the Collective", desc:"Signed letters and essays from readers and the publisher about how Utah is governed, funded and built. Opinions stay the writers' own; every factual statement is checked against public records, and each piece lists what was checked and changed.", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", color:"#6E4E17", group:"life" },
 ];
