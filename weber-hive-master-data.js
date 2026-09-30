@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"MAP 007: Trust Lands Sales", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/trust-lands-sales.html", tags:["trust lands","auctions","Powder Mountain","Heber"] },
+  { title:"MAP 006: Citizen Referendums", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/citizen-referendums.html", tags:["referendums","Eagle Mountain","Roy","B.E.A.R."] },
+  { title:"MAP 005: 2026 Races We've Covered", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/utah-2026-races.html", tags:["2026 election","House districts","Senate districts"] },
+  { title:"West Haven's 6% Energy Tax: No Property Tax, a New Line on the Power Bill", project:"Transparency", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/Transparency/west-haven-energy-tax.html", tags:["West Haven","energy tax","Oct. 1"] },
   { title:"Letters & Essays to the Collective — New Section", project:"Collective", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", tags:["essays","letters","from the publisher"] },
   { title:"Case 32: Loubet vs. Oates (HD-27) — Where the Money Comes From", project:"Candidates 2026", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/candidates2026/hd27-loubet-oates.html", tags:["HD-27","Loubet","House GOP PACs"] },
-  { title:"Meta in Eagle Mountain, Part 2: The Plant Not in the Announcement", project:"Data-Centers", date:"Sep 23, 2026", url:"https://webercountyhive-coder.github.io/Data-Centers/meta-eagle-mountain-gas-plant.html", tags:["Meta","gas plant","PSC","SB 132"] },
-  { title:"Meta in Eagle Mountain, Part 1: The Deal That Started Under Another Name", project:"Data-Centers", date:"Sep 23, 2026", url:"https://webercountyhive-coder.github.io/Data-Centers/weber-hive-dc-meta-eagle-mountain.html", tags:["Meta","tax breaks","water","Stadion"] },
-  { title:"Case 22: Bitner vs. Last (HD-17) — Two Filings, Two Numbers", project:"Candidates 2026", date:"Sep 23, 2026", url:"https://weber-county-hive.github.io/candidates2026/hd17-bitner-last.html", tags:["HD-17","Bitner","CMV PAC"] },
-  { title:"Case 21: Tran vs. Neal (SD-6) — The Deciding Vote", project:"Candidates 2026", date:"Sep 23, 2026", url:"https://weber-county-hive.github.io/candidates2026/sd6-tran-neal.html", tags:["SD-6","Tran","Meta PAC"] },
 ];
 
 const REPOS = [
@@ -41,4 +41,9 @@ const REPOS = [
   { title:"Public Lands", desc:"How public land, minerals and water rights change hands in Utah — explainers and case files, starting with how a public parcel becomes private.", url:"https://weber-county-hive.github.io/public-lands/", color:"#6b5a2e", group:"land" },
   { title:"Referendums", desc:"Citizen referendum efforts against city and county decisions across Utah — filings, legal deadlines and disputes over required materials. Includes Eagle Mountain's tax referendums and the Stratos data center referendum.", url:"https://webercountyhive-coder.github.io/referendum/", color:"#2f4f6b", group:"oversight" },
   { title:"Letters & Essays to the Collective", desc:"Signed letters and essays from readers and the publisher about how Utah is governed, funded and built. Opinions stay the writers' own; every factual statement is checked against public records, and each piece lists what was checked and changed.", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", color:"#6E4E17", group:"life" },
+  { title:"Utah Maps", desc:"Interactive maps of Utah's public money and land decisions: tax increment areas, PIDs, data centers, tax increases, the 2026 races and more. Every pin links to the public record and the matching case file.", url:"https://weber-county-hive.github.io/utah-maps/", color:"#14213D", group:"land" },
+  { title:"Voter Quick Scan 2026", desc:"Flip cards for Utah's Nov. 3, 2026 ballot: who paid for each campaign, what candidates said, and what the record shows they did. Built from campaign filings and public records.", url:"https://weber-county-hive.github.io/Voter-Quick-Scan-2026/", color:"#16222E", group:"money" },
+  { title:"The Sunday Buzz", desc:"The weekly recap from Utah Hive Politics and The Weber County Hive. Every story and case file from the week, linked to its source.", url:"https://weber-county-hive.github.io/sunday_buzz/", color:"#8a6d1f", group:"life" },
+  { title:"Drawn From the Record", desc:"Utah political cartoons that turn public records, policy and government accountability into clear, shareable comics.", url:"https://weber-county-hive.github.io/Drawn-From-the-Record/", color:"#5c3d5c", group:"life" },
+  { title:"Bait and Switch", desc:"Bills that start as one thing and morph in plain sight: bills that changed name, scope or key language between introduction and law.", url:"https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch.html", color:"#7a3a1f", group:"legislature" },
 ];
