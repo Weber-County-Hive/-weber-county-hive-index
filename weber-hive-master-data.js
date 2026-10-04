@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"Utah Hive News Spotlights — New Section: Agent Orange Memorial in Sunset", project:"News Spotlights", date:"Oct 4, 2026", url:"https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/", tags:["local news","veterans","Sunset","Sunday Buzz"] },
   { title:"MAP 007: Trust Lands Sales", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/trust-lands-sales.html", tags:["trust lands","auctions","Powder Mountain","Heber"] },
   { title:"MAP 006: Citizen Referendums", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/citizen-referendums.html", tags:["referendums","Eagle Mountain","Roy","B.E.A.R."] },
   { title:"MAP 005: 2026 Races We've Covered", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/utah-2026-races.html", tags:["2026 election","House districts","Senate districts"] },
   { title:"West Haven's 6% Energy Tax: No Property Tax, a New Line on the Power Bill", project:"Transparency", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/Transparency/west-haven-energy-tax.html", tags:["West Haven","energy tax","Oct. 1"] },
   { title:"Letters & Essays to the Collective — New Section", project:"Collective", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", tags:["essays","letters","from the publisher"] },
-  { title:"Case 32: Loubet vs. Oates (HD-27) — Where the Money Comes From", project:"Candidates 2026", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/candidates2026/hd27-loubet-oates.html", tags:["HD-27","Loubet","House GOP PACs"] },
 ];
 
 const REPOS = [
@@ -44,6 +44,8 @@ const REPOS = [
   { title:"Utah Maps", desc:"Interactive maps of Utah's public money and land decisions: tax increment areas, PIDs, data centers, tax increases, the 2026 races and more. Every pin links to the public record and the matching case file.", url:"https://weber-county-hive.github.io/utah-maps/", color:"#14213D", group:"land" },
   { title:"Voter Quick Scan 2026", desc:"Flip cards for Utah's Nov. 3, 2026 ballot: who paid for each campaign, what candidates said, and what the record shows they did. Built from campaign filings and public records.", url:"https://weber-county-hive.github.io/Voter-Quick-Scan-2026/", color:"#16222E", group:"money" },
   { title:"The Sunday Buzz", desc:"The weekly recap from Utah Hive Politics and The Weber County Hive. Every story and case file from the week, linked to its source.", url:"https://weber-county-hive.github.io/sunday_buzz/", color:"#8a6d1f", group:"life" },
+  { title:"Utah Hive News Spotlights", desc:"Short spotlights on local news from towns across Utah, shared each week in the Sunday Buzz. Each one links to the news reports it is based on, and readers can send in stories from their own towns.", url:"https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/", color:"#111111", group:"life" },
+  { title:"Community Calendar", desc:"Important dates for Utah voters and neighbors: election dates, filing and referendum deadlines and public hearings from every Hive case file, statewide and by county, plus community events sent in by neighbors. Save any date to your phone or share it.", url:"https://weber-county-hive.github.io/Community-Calendar/", color:"#1f5e6b", group:"life" },
   { title:"Drawn From the Record", desc:"Utah political cartoons that turn public records, policy and government accountability into clear, shareable comics.", url:"https://weber-county-hive.github.io/Drawn-From-the-Record/", color:"#5c3d5c", group:"life" },
   { title:"Bait and Switch", desc:"Bills that start as one thing and morph in plain sight: bills that changed name, scope or key language between introduction and law.", url:"https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch.html", color:"#7a3a1f", group:"legislature" },
 ];
