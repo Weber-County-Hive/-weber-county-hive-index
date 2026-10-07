@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send a Tip | The Weber County Hive</title>
+<meta name="description" content="Send a tip to The Weber County Hive. Tipster names are never published.">
+<meta name="robots" content="noindex">
+<noscript><meta http-equiv="refresh" content="0; url=https://forms.gle/sirNe75nnm3ErxUH6"></noscript>
+<style>
+  body{margin:0;background:#ffffff;color:#14213d;font-family:Georgia,serif;font-size:22px;line-height:1.5;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box}
+  a{color:#1d4ed8;font-weight:700}
+  .box{max-width:560px}
+</style>
+</head>
+<body>
+<div class="box">
+  <p>Opening the tip form…</p>
+  <p>If it doesn't open, <a id="go" href="https://forms.gle/sirNe75nnm3ErxUH6">tap here to send a tip</a>.</p>
+  <p style="font-size:18px;color:#475569">Your name is never published. We don't use personal information from a tip unless you tell us we may.</p>
+</div>
+<script>
+// Counts one visit (date, time, page, general source; no cookies, no personal data) then opens the form.
+(function(){
+  var FORM = 'https://forms.gle/sirNe75nnm3ErxUH6';
+  var url = 'https://weberhive.goatcounter.com/count?p=' + encodeURIComponent('/tip-form-click') +
+            '&t=' + encodeURIComponent('Tip form click') +
+            '&r=' + encodeURIComponent(document.referrer || '') +
+            '&rnd=' + Math.random().toString(36).slice(2);
+  var sent = false;
+  try { if (navigator.sendBeacon) sent = navigator.sendBeacon(url); } catch(e) {}
+  if (!sent) { try { new Image().src = url; } catch(e) {} }
+  setTimeout(function(){ window.location.replace(FORM); }, 400);
+})();
+</script>
+</body>
+</html>
