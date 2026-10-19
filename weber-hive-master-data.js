@@ -7,17 +7,17 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"26 New Bill Case Files: Records, Water, Bonds, Petitions and the Props 2, 3 and 4 Replacements", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/", tags:["86 bills on the docket","S.B. 277","H.B. 468","S.B. 200"] },
+  { title:"Ten Years of Petition Laws, 2016–2026: Every Change, Graded", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/weber-hive-petition-laws-2016-2026.html", tags:["referendums","initiatives","H.B. 32","signature fraud"] },
+  { title:"The Checkbox: Who Decides What Voters See", project:"Transparency", date:"Oct 18, 2026", url:"https://weber-county-hive.github.io/Transparency/weber-hive-at-risk-checkbox.html", tags:["conflict of interest","GRAMA","H.B. 504","Froerer"] },
   { title:"Utah Hive News Spotlights — New Section: Agent Orange Memorial in Sunset", project:"News Spotlights", date:"Oct 4, 2026", url:"https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/", tags:["local news","veterans","Sunset","Sunday Buzz"] },
   { title:"MAP 007: Trust Lands Sales", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/trust-lands-sales.html", tags:["trust lands","auctions","Powder Mountain","Heber"] },
   { title:"MAP 006: Citizen Referendums", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/citizen-referendums.html", tags:["referendums","Eagle Mountain","Roy","B.E.A.R."] },
-  { title:"MAP 005: 2026 Races We've Covered", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/utah-2026-races.html", tags:["2026 election","House districts","Senate districts"] },
-  { title:"West Haven's 6% Energy Tax: No Property Tax, a New Line on the Power Bill", project:"Transparency", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/Transparency/west-haven-energy-tax.html", tags:["West Haven","energy tax","Oct. 1"] },
-  { title:"Letters & Essays to the Collective — New Section", project:"Collective", date:"Sep 25, 2026", url:"https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/", tags:["essays","letters","from the publisher"] },
 ];
 
 const REPOS = [
   { title:"Transparency", desc:"Cross-official accountability and enforcement comparisons — how different cases and officials are (or aren't) held to the same standard.", url:"https://weber-county-hive.github.io/Transparency/", color:"#3a5f7d", group:"oversight" },
-  { title:"Bill-Tracker", desc:"The legislative bill docket — case files tracking individual bills through the Utah Legislature.", url:"https://weber-county-hive.github.io/Bill-Tracker/", color:"#2e5f5a", group:"legislature" },
+  { title:"Bill-Tracker", desc:"The legislative bill docket — case files tracking individual bills through the Utah Legislature, 86 bills on the docket and 101 on the research tracker, plus Ten Years of Petition Laws: all 35 initiative and referendum changes since 2016, graded. Every case file shows where it connects.", url:"https://weber-county-hive.github.io/Bill-Tracker/", color:"#2e5f5a", group:"legislature" },
   { title:"PIDS-Utah", desc:"“PID's: What is the Real Cost?” — Public Infrastructure Districts and what they actually cost homeowners.", url:"https://weber-county-hive.github.io/PIDS-Utah/", color:"#1e2f4d", group:"land" },
   { title:"Committees", desc:"Legislative committee tracker — who sits where, and what that overlap means.", url:"https://weber-county-hive.github.io/committees/", color:"#1f4d2f", group:"legislature" },
   { title:"UIPA", desc:"Utah Inland Port Authority coverage — Little Mountain Service Area, the wetlands warning story, and a general UIPA explainer.", url:"https://webercountyhive-coder.github.io/UIPA/", color:"#7a4a1f", group:"land" },
