@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"The Ledger: Clyde Companies Political Giving, 2018–2026", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/clyde-companies-giving.html", tags:["Clyde Companies","Spencer Cox","$461,104.81","Our Schools Now"] },
+  { title:"The Ledger: Taxpayers PAC and the 2025 Ogden Council Races", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/taxpayers-pac-ogden-2025.html", tags:["Taxpayers PAC","Ogden City Council","Weber County"] },
   { title:"The Ledger: Energy Overlap, PAC Officers and Confirmed Oil Money", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger-energy-overlap-pac-officers.html", tags:["Kyle Palmer","Irish Elk LLC","Big West Oil","energy money"] },
   { title:"26 New Bill Case Files: Records, Water, Bonds, Petitions and the Props 2, 3 and 4 Replacements", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/", tags:["86 bills on the docket","S.B. 277","H.B. 468","S.B. 200"] },
   { title:"Ten Years of Petition Laws, 2016–2026: Every Change, Graded", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/weber-hive-petition-laws-2016-2026.html", tags:["referendums","initiatives","H.B. 32","signature fraud"] },
   { title:"The Checkbox: Who Decides What Voters See", project:"Transparency", date:"Oct 18, 2026", url:"https://weber-county-hive.github.io/Transparency/weber-hive-at-risk-checkbox.html", tags:["conflict of interest","GRAMA","H.B. 504","Froerer"] },
-  { title:"Utah Hive News Spotlights — New Section: Agent Orange Memorial in Sunset", project:"News Spotlights", date:"Oct 4, 2026", url:"https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/", tags:["local news","veterans","Sunset","Sunday Buzz"] },
-  { title:"MAP 007: Trust Lands Sales", project:"Utah Maps", date:"Sep 30, 2026", url:"https://weber-county-hive.github.io/utah-maps/trust-lands-sales.html", tags:["trust lands","auctions","Powder Mountain","Heber"] },
 ];
 
 const REPOS = [
