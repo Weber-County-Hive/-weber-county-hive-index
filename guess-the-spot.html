@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guess the Spot · Ogden Valley Info & Events</title>
+<meta name="description" content="Weekly Ogden Valley photo puzzle. Guess where it was taken, or send in your own spot.">
+<meta property="og:title" content="Guess the Spot · Ogden Valley Info & Events">
+<meta property="og:description" content="Weekly Ogden Valley photo puzzle. Guess where it was taken, or send in your own spot.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ogdenvalleyevent.com/guess-the-spot.html">
+<meta property="og:image" content="https://ogdenvalleyevent.com/share-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ogdenvalleyevent.com/guess-the-spot.html">
+<link rel="icon" href="logo-10-years-32.png">
+<link rel="apple-touch-icon" href="logo-10-years-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="depot.css">
+<script>/* set the month's colors before the page paints */(function(){var m=new Date().getMonth()+1;document.documentElement.dataset.season=m===10?"halloween":[12,1,2].indexOf(m)>-1?"winter":[3,4,5].indexOf(m)>-1?"spring":[6,7,8].indexOf(m)>-1?"summer":"fall"})();</script>
+</head>
+<body class="depot-theme">
+<a class="sr" href="#main">Skip to content</a>
+<div class="alert-bar" id="alert-bar" hidden></div>
+<div class="canyon" role="region" aria-label="Canyon and road conditions"><div class="container">
+  <strong>Canyon check</strong>
+  <a href="https://ogdenvalley.udot.utah.gov/road-information/" target="_blank" rel="noopener">Ogden Valley roads &amp; cameras (UDOT)</a>
+  <a href="https://udottraffic.utah.gov/map" target="_blank" rel="noopener" data-track="open snowplow map">🚜 Snowplows (UDOT)</a>
+  <a href="live.html">Live view</a>
+  <a href="safety.html">Alerts &amp; fires</a>
+  <a href="https://forecast.weather.gov/MapClick.php?lat=41.3013&lon=-111.8219" target="_blank" rel="noopener">Eden weather</a>
+</div></div>
+<header class="site-head"><div class="container">
+  <a class="brand" href="index.html"><img data-logo="180" src="logo-10-years-180.png" alt="" width="52" height="52"><span><b>Ogden Valley</b><small>Information &amp; Events</small></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="main" id="nav" aria-label="Main"></nav>
+</div></header>
+<main id="main">
+<section class="hero"><div class="container"><div><p class="eyebrow">Every week</p><h1>Guess the Spot</h1><p class="lead" style="margin-top:12px">Where in the Valley was this taken? Send your guess. On day 7 the answer and everyone's guesses go up, and a winner is drawn.</p></div></div><svg class="ridge" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L120 40 L230 62 L380 18 L520 58 L660 30 L820 66 L980 22 L1120 60 L1260 34 L1440 56 L1440 110 L0 110Z" fill="var(--bg)" opacity=".35"/><path d="M0 92 L180 66 L360 86 L560 60 L760 84 L960 62 L1160 88 L1380 66 L1440 74 L1440 110 L0 110Z" fill="var(--bg)"/></svg></section>
+<section><div class="container" style="display:grid;gap:24px">
+  <div id="current"></div>
+  <div class="card" id="rules"><h3>How to play</h3><ol style="margin:6px 0 0;padding-left:22px;display:grid;gap:4px">
+    <li>A new mystery photo goes up each week, with a hint.</li>
+    <li>Send your guess with the form. One guess per person each week. If you send more than one, only your first counts.</li>
+    <li>Guesses close on day 7. That day the answer and everyone's guesses go up here, with first name and last initial only.</li>
+    <li>The winner is drawn at random from all the right guesses. Right means the actual spot, or close enough that you clearly knew it. We make the final call.</li>
+    <li>Winners are named here and in the weekly newsletter.</li>
+    <li>Kids under 13 can play. A parent sends the guess.</li>
+    <li>Your email or phone is never shown. We only use it to tell you if you won.</li>
+  </ol>
+  <h3 style="margin-top:14px">Sending in your own spot</h3><ul style="margin:6px 0 0;padding-left:22px;display:grid;gap:4px">
+    <li>It has to be a photo you took.</li>
+    <li>It has to be somewhere anyone can go or see: a public place, a trail, or a spot you can see from the road. No one's private yard but your own.</li>
+    <li>If we use your spot, you get credit, and you can't guess that week.</li>
+  </ul></div>
+  <div class="card"><h3>Stump the Valley</h3><p>Have a spot that will fool everyone? Send a photo you took and the answer. We'll feature community spots with your name.</p><div class="btns" style="margin-top:6px"><a class="btn blue" data-form="guessSubmit" href="#">Send a spot</a></div><p class="meta">By sending a photo you agree to our <a href="terms.html">terms</a>: you took it, and you let us show it on this site, in the newsletter and on our Facebook and Instagram, with credit.</p></div>
+  <div><h2 style="margin-bottom:12px">Past spots</h2><div id="past" class="grid" data-gallery></div></div>
+</div></section>
+<section class="d-more" style="padding-top:10px"><div class="d-wrap">
+  <p class="d-eye">More aboard the Utah Depot</p>
+  <h2 class="d-h">Community Kids</h2>
+  <div class="d-cars"><a class="d-car" href="kids.html"><b>The Utah Depot</b><span>Map, vote & Ticket Book</span><i aria-hidden="true"></i></a><a class="d-car" href="depot-story.html"><b>This week's stop</b><span>The newest story</span><i aria-hidden="true"></i></a><a class="d-car" href="station-board.html"><b>Station Board</b><span>Lessons, teams & kid events</span><i aria-hidden="true"></i></a><a class="d-car" href="coloring.html"><b>Holiday Express</b><span>Valley coloring pages</span><i aria-hidden="true"></i></a><a class="d-car" href="color.html"><b>Paint Car</b><span>Color online</span><i aria-hidden="true"></i></a><a class="d-car" href="where-moose.html"><b>Moose Car</b><span>Where's Ben Lomoose?</span><i aria-hidden="true"></i></a><a class="d-car" href="i-spy.html"><b>I Spy Car</b><span>Find the hidden things</span><i aria-hidden="true"></i></a><a class="d-car" href="puzzles.html"><b>Puzzle Car</b><span>Word search, crossword, jigsaw</span><i aria-hidden="true"></i></a><a class="d-car" href="scavenger-hunt.html"><b>Scavenger Hunt Car</b><span>This month's hunt</span><i aria-hidden="true"></i></a><a class="d-car" href="guess-the-spot.html" aria-current="page"><b>Guess the Spot Car</b><span>Where was this taken?</span><i aria-hidden="true"></i></a></div>
+</div></section>
+</main>
+<footer class="site-foot"></footer>
+<script src="layout.js"></script>
+<script src="config.js"></script>
+<script src="places.js"></script>
+<script src="site.js"></script>
+<script>
+
+(async function(){const S=window.OVE_SITE,el=S.el;const spots=(S.C.guessSpots||[]).slice();
+/* Day 7 = 6 days after a spot's first day ("start"). The answer and guesses come from guessreveal.json,
+   which only has a week once its day 7 has come (the answer is never typed in this public code). */
+const ymd=t=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/Denver",year:"numeric",month:"2-digit",day:"2-digit"}).format(t);
+const today=ymd(new Date()),plus=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return ymd(d)};
+const R=((await S.loadJSON("guessreveal.json"))||{}).weeks||{};
+spots.forEach(s=>{const r=s.start&&R[s.start];if(r){s.revealed=true;s.answer=r.answer||s.answer;s.winner=r.winner||s.winner;s.guesses=r.guesses||[]}s.revealDay=s.start?plus(s.start,6):""});
+const cur=spots.filter(s=>!s.revealed&&(!s.start||s.start<=today)).pop(),past=spots.filter(s=>s.revealed).reverse();
+const nice=k=>k?new Date(k+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"}):"";
+const box=document.getElementById("current");
+if(!cur)box.append(el("div",{class:"empty"},[el("p",{text:"The next Guess the Spot photo is coming soon. See last week's answer below, or send in a spot of your own."})]));
+else{const closed=cur.revealDay&&today>=cur.revealDay;box.append(el("article",{class:"card feature"},[el("p",{class:"eyebrow",text:"This week · "+(cur.week||"")}),cur.image?el("img",{src:cur.image,alt:"Mystery spot photo",style:"border-radius:10px;width:100%;max-height:560px;object-fit:cover"}):null,cur.hint?el("p",{text:"Hint: "+cur.hint}):null,el("p",{class:"meta",text:cur.by==="community"&&cur.credit?"Spot sent in by "+cur.credit:"Spot from Ogden Valley Info & Events"}),
+closed?el("p",{text:"Guesses are closed. The answer and everyone's guesses go up today."}):el("div",{class:"btns"},[el("a",{class:"btn primary","data-form":"guess",href:(S.C.forms&&S.C.forms.guess)||(S.C.facebook||"https://www.facebook.com/ogdenvalleyevents"),text:(S.C.forms&&S.C.forms.guess)?"Send your guess":"Guess on our Facebook post"})]),
+!closed&&cur.revealDay?el("p",{class:"meta",text:"Guesses close and the answer goes up "+nice(cur.revealDay)+". "}):null,
+el("p",{class:"kid-note",text:"Kids: anyone can play along. If you're under 13, have a parent send your guess."}),el("p",{class:"meta"},[el("a",{href:"#rules",text:"How to play"})])]))}
+const pg=document.getElementById("past");if(!past.length)pg.append(el("p",{class:"meta",text:"Answers show up here on day 7 of each week."}));
+past.forEach(s=>{const g=s.guesses||[];pg.append(el("article",{class:"card"},[s.image?el("img",{src:s.answerImage||s.image,alt:s.answer||"Answer photo",style:"border-radius:10px"}):null,el("p",{class:"eyebrow",text:"The answer"}),el("h3",{text:s.answer||"Answer"}),
+s.winner?el("p",{},[el("b",{text:"Winner: "}),document.createTextNode(s.winner+" 🎉")]):(g.length?el("p",{class:"meta",text:"Winner coming soon."}):null),
+el("p",{class:"meta",text:[s.week,g.length?g.length+(g.length===1?" guess":" guesses")+(g.filter(x=>x.right).length?", "+g.filter(x=>x.right).length+" right":""):"",s.credit?"Photo: "+s.credit:""].filter(Boolean).join(" · ")}),
+g.length?el("details",{},[el("summary",{text:"See everyone's guesses"}),el("ul",{style:"margin:8px 0 0;padding-left:20px;display:grid;gap:4px"},g.map(x=>el("li",{},[el("b",{text:(x.name||"Someone")+": "}),document.createTextNode(x.guess+(x.right?" ✓":""))])))]):null]))});
+document.querySelectorAll("[data-form]").forEach(a=>{const u=S.C.forms&&S.C.forms[a.dataset.form];if(u){a.href=u;a.target="_blank";a.rel="noopener"}else if(a.dataset.form==="guessSubmit"){a.setAttribute("aria-disabled","true")}});
+})();
+</script>
+</body>
+</html>
