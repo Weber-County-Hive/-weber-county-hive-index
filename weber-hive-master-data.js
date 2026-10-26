@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"Rep. Jason Kyle and the Great Salt Lake: Every Vote, 2023–2026", project:"GSL-Votes", date:"Oct 25, 2026", url:"https://weber-county-hive.github.io/GSL-Votes/", tags:["Jason Kyle","HD-8","Great Salt Lake","64 water votes"] },
   { title:"The Ledger: Clyde Companies Political Giving, 2018–2026", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/clyde-companies-giving.html", tags:["Clyde Companies","Spencer Cox","$461,104.81","Our Schools Now"] },
   { title:"The Ledger: Taxpayers PAC and the 2025 Ogden Council Races", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/taxpayers-pac-ogden-2025.html", tags:["Taxpayers PAC","Ogden City Council","Weber County"] },
   { title:"The Ledger: Energy Overlap, PAC Officers and Confirmed Oil Money", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger-energy-overlap-pac-officers.html", tags:["Kyle Palmer","Irish Elk LLC","Big West Oil","energy money"] },
   { title:"26 New Bill Case Files: Records, Water, Bonds, Petitions and the Props 2, 3 and 4 Replacements", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/", tags:["86 bills on the docket","S.B. 277","H.B. 468","S.B. 200"] },
   { title:"Ten Years of Petition Laws, 2016–2026: Every Change, Graded", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/weber-hive-petition-laws-2016-2026.html", tags:["referendums","initiatives","H.B. 32","signature fraud"] },
-  { title:"The Checkbox: Who Decides What Voters See", project:"Transparency", date:"Oct 18, 2026", url:"https://weber-county-hive.github.io/Transparency/weber-hive-at-risk-checkbox.html", tags:["conflict of interest","GRAMA","H.B. 504","Froerer"] },
 ];
 
 const REPOS = [
@@ -48,4 +48,5 @@ const REPOS = [
   { title:"Community Calendar", desc:"Important dates for Utah voters and neighbors: election dates, filing and referendum deadlines and public hearings from every Hive case file, statewide and by county, plus community events sent in by neighbors. Save any date to your phone or share it.", url:"https://weber-county-hive.github.io/Community-Calendar/", color:"#1f5e6b", group:"life" },
   { title:"Drawn From the Record", desc:"Utah political cartoons that turn public records, policy and government accountability into clear, shareable comics.", url:"https://weber-county-hive.github.io/Drawn-From-the-Record/", color:"#5c3d5c", group:"life" },
   { title:"Bait and Switch", desc:"Bills that start as one thing and morph in plain sight: bills that changed name, scope or key language between introduction and law.", url:"https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch.html", color:"#7a3a1f", group:"legislature" },
+  { title:"GSL-Votes", desc:"How Utah legislators voted on Great Salt Lake and water bills, checked against the Legislature's own roll calls and graded on the Hive's rubric. First up: Rep. Jason Kyle, every water vote 2023–2026.", url:"https://weber-county-hive.github.io/GSL-Votes/", color:"#1f4e6b", group:"legislature" },
 ];
