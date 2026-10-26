@@ -431,6 +431,22 @@ function runSearch(){
 input.addEventListener('input', runSearch);
 runSearch();
 </script>
+<script>
+// Click counting for GoatCounter: each click on a project or case file is counted
+// as "index-open-" plus the project folder and page name.
+(function(){
+  function gc(path,title){ try{ if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:path,title:title||path,event:true}); }catch(e){} }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||''; if(h.charAt(0)==='#') return;
+    try{
+      var u=new URL(h,location.href), parts=u.pathname.split('/').filter(Boolean);
+      var name=u.hostname.indexOf('github.io')>-1 ? parts.join('-').replace(/\.html$/,'') : 'out-'+u.hostname.replace(/^www\./,'');
+      gc('index-open-'+(name||'home'), (a.textContent||'').trim().slice(0,90));
+    }catch(err){}
+  });
+})();
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
