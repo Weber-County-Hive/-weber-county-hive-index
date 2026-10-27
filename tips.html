@@ -48,6 +48,42 @@
   details.form-q summary{cursor:pointer;font-weight:700;}
   footer{text-align:center;color:var(--dimmer);font-family:'Inter',sans-serif;font-size:.85rem;padding:30px 20px 50px;}
 </style>
+<style>
+.tm-list{max-height:620px;overflow-y:auto;}
+.tm-log{font-size:.95rem;margin-left:8px;color:#5b5850;}
+.tm-send{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px;background:#17130c;color:#efe6cc;border-radius:6px;padding:14px 16px;font-size:1.05rem;}
+.tm-send b{color:#fff;}
+.tm-send-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.tm-btn-gold{background:#d4af37;color:#17130c;font-family:'Inter',sans-serif;font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none;}
+.tm-btn-line{border:2px solid #d4af37;color:#d4af37;font-family:'Inter',sans-serif;font-weight:700;padding:10px 16px;border-radius:6px;text-decoration:none;}
+.tm-wrap{max-width:900px;margin:0 auto 40px;background:var(--paper-card,#faf7ef);border:1px solid var(--border,#ddd6c4);border-top:3px solid var(--gold,#d4af37);border-radius:8px;padding:22px 22px 16px;}
+.tm-wrap h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:#17130c;margin-bottom:4px;}
+.tm-wrap .tm-dek{font-size:1.1rem;color:#5b5850;margin-bottom:14px;}
+.tm-stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
+.tm-stats div{flex:1 1 180px;background:#17130c;color:#efe6cc;border-radius:6px;padding:12px 14px;}
+.tm-stats b{display:block;font-family:'Inter',sans-serif;font-size:2.2rem;color:#d4af37;line-height:1.1;}
+.tm-stats span{font-size:1.02rem;}
+.tm-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:start;}
+@media(max-width:720px){.tm-grid{grid-template-columns:1fr;}}
+.tm-map svg{width:100%;height:auto;display:block;}
+.tm-map path:focus{outline:none;stroke:#17130c;stroke-width:3;}
+.tm-key{font-family:'Inter',sans-serif;font-size:.95rem;color:#5b5850;margin-top:8px;}
+.tm-key span{display:inline-block;width:16px;height:16px;border-radius:3px;vertical-align:-3px;margin:0 4px 0 10px;}
+.tm-help{font-size:1.08rem;margin-bottom:10px;}
+.tm-btns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+.tm-btns button{font-family:'Inter',sans-serif;font-size:1rem;padding:9px 14px;border-radius:6px;border:2px solid #17130c;background:#fff;color:#17130c;cursor:pointer;}
+.tm-btns button.on{background:#17130c;color:#fff;}
+.tm-btns button b{color:#c99a1e;margin-left:4px;}
+.tm-out{font-family:'Inter',sans-serif;font-size:.95rem;color:#5b5850;align-self:center;}
+.tm-list h4{font-family:'Playfair Display',serif;font-size:1.3rem;margin:4px 0 8px;}
+.tm-card{background:#fff;border:1px solid #ddd6c4;border-left:5px solid #d4af37;border-radius:6px;padding:12px 14px;margin-bottom:10px;}
+.tm-meta{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#5b5850;margin-bottom:4px;}
+.tm-claim{font-size:1.12rem;line-height:1.4;margin-bottom:8px;}
+.tm-res{font-family:'Inter',sans-serif;font-size:1rem;}
+.tm-res a{color:#3a5f7d;font-weight:600;}
+.tm-badge{display:inline-block;color:#fff;font-size:.85rem;font-weight:700;padding:3px 9px;border-radius:4px;margin-right:6px;}
+.tm-note{font-size:.98rem;color:#5b5850;margin-top:12px;}
+</style>
 </head>
 <body>
 
@@ -72,7 +108,12 @@
     </ul>
   </div>
 
-  <h2 id="send">Send a tip</h2>
+      <section class="tm-wrap" id="tips-map" style="margin-top:24px">
+      <h2>Where the tips point</h2>
+      <p class="tm-dek">Readers send tips, and people post claims in public. Here is where each one was about, what we checked, and what came of it.</p>
+      <div id="tips-map-root"><noscript>See the full list on the <a href="tips.html">tips log</a>.</noscript></div>
+    </section>
+<h2 id="send">Send a tip</h2>
   <p>Found a document, a vote, a filing or a project we should look at? Send it. Links and documents help the most.</p>
   <div class="send">
     <a class="btn primary" id="form-link" href="tip.html">Send a tip →</a>
@@ -102,221 +143,31 @@
   <input type="search" class="search" id="q" placeholder="Search tips (e.g. PAC, Carbon, Amendment B)" aria-label="Search tips">
   <p class="count" id="count" aria-live="polite"></p>
 
-  <div id="log">
-    <article class="tip" data-r="partly" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Email tip · checked Oct. 18, 2026</div>
-      <h3>Eagle Mountain referendum: "The city filed its argument late, put the sponsors' contact information out early, and sent an expensive mailer to every home."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Sponsors' home addresses, and the liaison's phone and email, are in the city's posted pamphlet. State law requires a copy of the application in it (city pamphlet, pages 3–12).</li>
-        <li>Not supported: the city's argument is stamped received Sept. 8, within the 15-day window. The pamphlet is dated Sept. 14, the same day as the referability determination.</li>
-        <li>The sponsors' own argument is marked "[not timely submitted]" by the city (pamphlet, page 1).</li>
-        <li>Still checking: the mailer. The Hive has not seen it.</li>
-      </ul>
-      <a class="go" href="https://webercountyhive-coder.github.io/referendum/eagle-mountain-tax-referendum-2.html#posted-pamphlet">See the full answer →</a>
-    </article>
-    <article class="tip" data-r="partly" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Public post</div>
-      <h3>"Democrats hate Amendment B because initiatives are their route to raise taxes."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Republicans voted against B too: 2 senators and 4 representatives (Ballotpedia).</li>
-        <li>The 2018 school-tax initiative was funded by Utah business leaders (disclosures.utah.gov).</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
+  <div id="log"><noscript><p>The tips log needs JavaScript turned on.</p></noscript></div>
+  <p class="count" id="log-updated"></p>
 
-    <article class="tip" data-r="notfound" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Public comments (several threads)</div>
-      <h3>"No citizen vote ever needs a supermajority" and "Salt Lake County alone can pass an initiative."</h3>
-      <span class="badge b-notfound">Not found in records</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Arizona (2022) and Florida (2006) both use 60% voter thresholds.</li>
-        <li>Salt Lake County is about 34.5% of Utah; a county signature rule was struck down in 2002.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Public comments</div>
-      <h3>"The Legislature's bar is higher: an absolute majority of all members."</h3>
-      <span class="badge b-verified">Verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Right (Art. VI, Sec. 22). Statewide initiatives only run in even-year November elections, and the governor can't veto them.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Public comment</div>
-      <h3>"They restructured the judiciary over the chief justice's objection, and the district rule sank the Prop 4 repeal."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>S.B. 134 (Jan. 2026) confirmed, with objections from the chief justice and the State Bar.</li>
-        <li>The rule is 26 of 29 Senate districts, not counties.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 8, 2026 · Question from the thread</div>
-      <h3>"Did Prop 2 or Prop 3 raise taxes, and what did the Legislature change?"</h3>
-      <span class="badge b-verified">Verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Prop 2: no tax; medical cannabis is tax-exempt. Prop 3: 0.15% sales tax, kept in full when coverage was cut.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#voters-vs-changes">See what voters passed vs. what changed →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Follow-up question</div>
-      <h3>"How many tax increases has the Legislature passed?"</h3>
-      <span class="badge b-verified">At least 9 since 2015</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>No official total exists. From le.utah.gov: 7 bills raised a rate or created a tax, and 2 created new taxing powers (2015–2026).</li>
-        <li>The same Legislature cut the income tax each year from 2022 to 2026.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public comment (question)</div>
-      <h3>"Who is passing all these voter passed tax initiatives??"</h3>
-      <span class="badge b-verified">Rare, per the record</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Most recent: Prop 3 (2018), 0.15% sales tax, about 53%. It would have failed under 60%.</li>
-        <li>No citizen initiative has qualified for the statewide ballot since 2018 (Ballotpedia).</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public comment (question)</div>
-      <h3>"If this amendment doesn't pass by 60%, you'll repeal it, right? 50% + 1 applies here too?"</h3>
-      <span class="badge b-verified">Yes, 50% + 1 applies to B</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>Amendments pass with a simple majority of voters (Utah Const. Art. XXIII, Sec. 1).</li>
-        <li>Repealing B would need two-thirds of the Legislature first; citizens can't put amendments on the ballot.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public comment</div>
-      <h3>"A tax increase is a tax increase… I would also vote yes on requiring the same for legislators."</h3>
-      <span class="badge b-verified">Right on the record</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li>B's 60% rule applies to a tax increase in an initiative whoever pays it, businesses included.</li>
-        <li>Legislators pass taxes by a majority of members elected (Art. VI, Sec. 22); no 60% rule for them is on the ballot.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the full answer →</a>
-    </article>
-
-    <article class="tip" data-r="verified" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public comment (question)</div>
-      <h3>"If the Legislature raised the food tax, couldn't we just repeal it with an initiative that only needs 50%? What am I missing?"</h3>
-      <span class="badge b-verified">Mostly right</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li><b>Right:</b> lawmakers raise taxes by a majority either way, and an initiative that only cuts a tax would still need a simple majority under Amendment B.</li>
-        <li><b>Correction:</b> a veto override takes two-thirds, not 60%. The 2019 food tax was stopped by a referendum, which B doesn't change.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#terms">See "initiative vs. referendum" →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public comment on a Hive graphic</div>
-      <h3>"YES on B should say 'tax increase,' not 'tax change.' NO on B should say the Legislature can only amend initiatives that do not alter or reform government."</h3>
-      <span class="badge b-partly">Partly verified · we corrected our graphic</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li><b>Right:</b> "tax change" was too broad, since plain tax cuts still need a simple majority. The graphic now says "tax increase, as S.J.R. 2 defines it."</li>
-        <li><b>Partly right:</b> the Utah Supreme Court (July 11, 2024) said the Legislature can still amend a government-reform initiative if the change doesn't impair the reform, and a change that impairs it must be narrowly tailored to a compelling government interest. The ruling doesn't limit amending other initiatives. Our NO column now names that limit.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#yesno">See the corrected YES / NO →</a>
-    </article>
-
-
-    <article class="tip" data-r="verified" data-c="money elections">
-      <div class="meta">Oct. 7, 2026 · Private message</div>
-      <h3>"The PAC backing Amendment B is chaired by the amendment's own sponsor."</h3>
-      <span class="badge b-verified">Verified</span><span class="cat">Campaign money &amp; PACs</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li><b>Checked:</b> Axios (Oct. 7, 2026) and the PAC's Statement of Organization on disclosures.utah.gov.</li>
-        <li><b>Result:</b> Taxpayer Shield PAC (created Dec. 1, 2025) lists Sen. Lincoln Fillmore, S.J.R. 2's primary sponsor, as Chairman. Axios names it as backing Amendment B. Its first report shows no Amendment B spending yet.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#people">See it on the amendments page →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="datacenters boards">
-      <div class="meta">Oct. 7, 2026 · Private message</div>
-      <h3>"This is the master data center plan for Utah, and they lure data centers with cheap labor."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Data centers &amp; energy</span><span class="cat">Boards &amp; unelected power</span>
-      <ul>
-        <li><b>Checked:</b> EDCUtah's data center profile (FY 23-24), Site Ready Utah's site list, EDCUtah's investor page, a state funding request and a county assignment list.</li>
-        <li><b>Confirmed:</b> the brochure says "Utah offers lower costs for labor, construction, land, permits…" and prints a Utah-vs-national wage table. EDCUtah certifies and markets 14 large sites; several sit in the same areas as data center and tax increment projects.</li>
-        <li><b>Not confirmed:</b> it is a sales brochure from a private business group, not a government plan.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Unelected-Power/edcutah.html">See the EDCUtah case file →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="elections">
-      <div class="meta">Oct. 7, 2026 · Public Facebook post (B.W.)</div>
-      <h3>"Voters passed Props 2, 3 and 4 in 2018, the Legislature changed all three, then came Amendment D, and now Amendment B."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li><b>Confirmed:</b> Prop 2 replaced by H.B. 3001 (Dec. 2018); Prop 3 changed by S.B. 96 (Feb. 2019); Prop 4 replaced by S.B. 200; 2024 Amendment D voided by the Utah Supreme Court.</li>
-        <li><b>Not confirmed:</b> the post's mention of a project near Price "involving hundreds of small nuclear reactors."</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#timeline">See the timeline →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="elections money">
-      <div class="meta">Oct. 2026 · Public Facebook comments</div>
-      <h3>23 public comments about Amendments A and B, each checked against the record</h3>
-      <span class="badge b-partly">Mixed results</span><span class="cat">Elections &amp; ballot measures</span>
-      <ul>
-        <li><b>Result:</b> each comment is shown with initials and marked myth, fact, partly true, or open, with the record named next to it.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#comments">See the comments and responses →</a>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="datacenters land">
-      <div class="meta">Sept. 27, 2026 · Shared public post</div>
-      <h3>"Carbon County is using NDAs and pushing farm families off land and water for data centers and a nuclear site."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Data centers &amp; energy</span><span class="cat">Land &amp; water</span>
-      <ul>
-        <li><b>Confirmed:</b> Trust Lands posted a 640-acre parcel near Wellington for bids (July 8, 2026) and listed a lease with Valar Atomics on its Aug. 20 agenda. Carbon County's own website says the commission signs NDAs with prospective companies.</li>
-        <li><b>Not found in public records:</b> the claims about a named farm family, an eminent domain threat, and an ended grazing lease. They stay out until a record backs them.</li>
-      </ul>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="taxtools land">
-      <div class="meta">Aug. 2026 · Public Facebook comment</div>
-      <h3>"A county commissioner personally owns over a thousand acres where the West Weber inland port is going."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Tax tools (PID, TIF, CRA, UIPA, MIDA)</span><span class="cat">Land &amp; water</span>
-      <ul>
-        <li><b>Checked:</b> Weber County assessor owner searches, state business filings, and UIPA's West Weber project area plan.</li>
-        <li><b>Result:</b> the large landholding traced to PCC Land LLC (Gardner and Stephens network), not to the commissioner personally. The plan confirms the Northwestern Band of the Shoshone Nation's history in the area. A claim about burial grounds was not confirmed in any record.</li>
-      </ul>
-    </article>
-
-    <article class="tip" data-r="partly" data-c="taxtools datacenters">
-      <div class="meta">Aug. 2026 · Neighborhood Facebook post</div>
-      <h3>"Eagle Mountain is raising our property tax while giving data centers huge tax breaks."</h3>
-      <span class="badge b-partly">Partly verified</span><span class="cat">Tax tools (PID, TIF, CRA, UIPA, MIDA)</span><span class="cat">Data centers &amp; energy</span>
-      <ul>
-        <li><b>Confirmed:</b> a 220.88% increase was proposed and the council approved 183% at the August 2026 Truth in Taxation hearing. Meta's 2018 tax incentive (about $150 million) is documented.</li>
-        <li><b>Corrected:</b> the post's "$77 million in 2021" is real but belongs to the Sweetwater CRA #2 project area, not a Meta-only deal. No public dollar figure was found for QTS.</li>
-      </ul>
-      <a class="go" href="https://weber-county-hive.github.io/Transparency/tyson-eagle-mountain-closure.html">Related: the Tyson / Pole Canyon case →</a>
-    </article>
-
-  </div>
-  <p class="count">Older tips are being added. Last updated Oct. 7, 2026.</p>
 
 </div>
 
-<footer>The Weber County Hive · Public records only · Tipster names are never published</footer>
+<footer>The Weber County Hive · Public records only · Tipster names are never published<br>The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</footer>
 
+<script src="tips-data.js"></script>
+<script>
+(function(){
+  var L={elections:'Elections &amp; ballot measures',money:'Campaign money &amp; PACs',taxtools:'Tax tools (PID, TIF, CRA, UIPA, MIDA)',datacenters:'Data centers &amp; energy',land:'Land &amp; water',boards:'Boards &amp; unelected power'};
+  var D=window.HIVE_TIP_LIST, box=document.getElementById('log'); if(!D||!box) return;
+  box.innerHTML=D.tips.map(function(t){
+    return '<article class="tip" id="tip-'+t.id+'" data-r="'+t.r+'" data-c="'+t.cats.join(' ')+'">'+
+      '<div class="meta">'+t.date+' · '+t.how+(t.extra?' · '+t.extra:'')+'</div>'+
+      '<h3>'+t.claim+'</h3>'+
+      '<span class="badge b-'+t.r+'">'+t.badge+'</span>'+t.cats.map(function(c){return '<span class="cat">'+(L[c]||c)+'</span>';}).join('')+
+      '<ul>'+t.points.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul>'+
+      (t.link?'<a class="go" href="'+t.link+'">'+t.linkText+'</a>':'')+'</article>';
+  }).join('');
+  document.getElementById('log-updated').textContent='Older tips are being added. Last updated '+D.updated+'.';
+  if(location.hash&&location.hash.indexOf('#tip-')===0){var e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView();}
+})();
+</script>
 <script>
 (function(){
   var sel={c:'all',r:'all'};
@@ -344,5 +195,7 @@
 </script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script src="tips-map.js"></script>
+<script>try{renderHiveTipsMap(document.getElementById("tips-map-root"),{noSend:true});}catch(e){}</script>
 </body>
 </html>

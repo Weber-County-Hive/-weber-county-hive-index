@@ -244,6 +244,42 @@
     font-size:0.78rem;
   }
 </style>
+<style>
+.tm-list{max-height:620px;overflow-y:auto;}
+.tm-log{font-size:.95rem;margin-left:8px;color:#5b5850;}
+.tm-send{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px;background:#17130c;color:#efe6cc;border-radius:6px;padding:14px 16px;font-size:1.05rem;}
+.tm-send b{color:#fff;}
+.tm-send-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.tm-btn-gold{background:#d4af37;color:#17130c;font-family:'Inter',sans-serif;font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none;}
+.tm-btn-line{border:2px solid #d4af37;color:#d4af37;font-family:'Inter',sans-serif;font-weight:700;padding:10px 16px;border-radius:6px;text-decoration:none;}
+.tm-wrap{max-width:900px;margin:0 auto 40px;background:var(--paper-card,#faf7ef);border:1px solid var(--border,#ddd6c4);border-top:3px solid var(--gold,#d4af37);border-radius:8px;padding:22px 22px 16px;}
+.tm-wrap h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:#17130c;margin-bottom:4px;}
+.tm-wrap .tm-dek{font-size:1.1rem;color:#5b5850;margin-bottom:14px;}
+.tm-stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
+.tm-stats div{flex:1 1 180px;background:#17130c;color:#efe6cc;border-radius:6px;padding:12px 14px;}
+.tm-stats b{display:block;font-family:'Inter',sans-serif;font-size:2.2rem;color:#d4af37;line-height:1.1;}
+.tm-stats span{font-size:1.02rem;}
+.tm-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:start;}
+@media(max-width:720px){.tm-grid{grid-template-columns:1fr;}}
+.tm-map svg{width:100%;height:auto;display:block;}
+.tm-map path:focus{outline:none;stroke:#17130c;stroke-width:3;}
+.tm-key{font-family:'Inter',sans-serif;font-size:.95rem;color:#5b5850;margin-top:8px;}
+.tm-key span{display:inline-block;width:16px;height:16px;border-radius:3px;vertical-align:-3px;margin:0 4px 0 10px;}
+.tm-help{font-size:1.08rem;margin-bottom:10px;}
+.tm-btns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+.tm-btns button{font-family:'Inter',sans-serif;font-size:1rem;padding:9px 14px;border-radius:6px;border:2px solid #17130c;background:#fff;color:#17130c;cursor:pointer;}
+.tm-btns button.on{background:#17130c;color:#fff;}
+.tm-btns button b{color:#c99a1e;margin-left:4px;}
+.tm-out{font-family:'Inter',sans-serif;font-size:.95rem;color:#5b5850;align-self:center;}
+.tm-list h4{font-family:'Playfair Display',serif;font-size:1.3rem;margin:4px 0 8px;}
+.tm-card{background:#fff;border:1px solid #ddd6c4;border-left:5px solid #d4af37;border-radius:6px;padding:12px 14px;margin-bottom:10px;}
+.tm-meta{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#5b5850;margin-bottom:4px;}
+.tm-claim{font-size:1.12rem;line-height:1.4;margin-bottom:8px;}
+.tm-res{font-family:'Inter',sans-serif;font-size:1rem;}
+.tm-res a{color:#3a5f7d;font-weight:600;}
+.tm-badge{display:inline-block;color:#fff;font-size:.85rem;font-weight:700;padding:3px 9px;border-radius:4px;margin-right:6px;}
+.tm-note{font-size:.98rem;color:#5b5850;margin-top:12px;}
+</style>
 </head>
 <body>
 
@@ -295,6 +331,7 @@
       <span class="small">EVERY THREAD, ONE HOME</span>
     </h1>
     <p class="hive-sub">Every investigation, docket, and interactive built by The Weber County Hive — one place to find any of it.</p>
+    <p class="hive-sub" style="font-weight:700;margin-top:6px">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</p>
   </div>
 
   <div class="wrap">
@@ -314,7 +351,12 @@
         <a href="tips.html#send" style="border:2px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-weight:700;padding:10px 16px;border-radius:6px;text-decoration:none;">Send a tip</a>
       </div>
     </section>
-    <section class="latest" id="latest">
+        <section class="tm-wrap" id="tips-map">
+      <h2>Where the tips point</h2>
+      <p class="tm-dek">Readers send tips, and people post claims in public. Here is where each one was about, what we checked, and what came of it.</p>
+      <div id="tips-map-root"><noscript>See the full list on the <a href="tips.html">tips log</a>.</noscript></div>
+    </section>
+<section class="latest" id="latest">
       <div class="shelf-head"><h2>Latest case files</h2><span class="shelf-note">NEWEST FIRST</span></div>
       <div class="latest-grid" id="latest-grid"></div>
     </section>
@@ -334,6 +376,7 @@
         fill="none" stroke="var(--ink-dimmer)" stroke-width="3"/>
     </svg>
     <div>Read the full investigations on <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive Substack →</a></div>
+    <div class="footer-sub">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group.</div>
     <div class="footer-sub">Public records, primary sources, no speculation.</div>
   </footer>
 
@@ -449,5 +492,8 @@ runSearch();
 </script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script src="tips-data.js"></script>
+<script src="tips-map.js"></script>
+<script>try{renderHiveTipsMap(document.getElementById("tips-map-root"));}catch(e){}</script>
 </body>
 </html>
