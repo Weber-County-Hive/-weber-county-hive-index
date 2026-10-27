@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"Public Notice Watch: Weber Basin's $175M Bonds, Plan Ogden, a Clyde Water Settlement and West Haven's 21 South (hearings Oct. 29 to Nov. 10)", project:"Community Calendar", date:"Oct 27, 2026", url:"https://weber-county-hive.github.io/Community-Calendar/politics.html", tags:["Weber Basin","Plan Ogden","RLW/Clyde","West Haven","Public notices"] },
   { title:"Rep. Jason Kyle and the Great Salt Lake: Every Vote, 2023–2026", project:"GSL-Votes", date:"Oct 25, 2026", url:"https://weber-county-hive.github.io/GSL-Votes/", tags:["Jason Kyle","HD-8","Great Salt Lake","64 water votes"] },
   { title:"The Ledger: Clyde Companies Political Giving, 2018–2026", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/clyde-companies-giving.html", tags:["Clyde Companies","Spencer Cox","$461,104.81","Our Schools Now"] },
   { title:"The Ledger: Taxpayers PAC and the 2025 Ogden Council Races", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/taxpayers-pac-ogden-2025.html", tags:["Taxpayers PAC","Ogden City Council","Weber County"] },
   { title:"The Ledger: Energy Overlap, PAC Officers and Confirmed Oil Money", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger-energy-overlap-pac-officers.html", tags:["Kyle Palmer","Irish Elk LLC","Big West Oil","energy money"] },
   { title:"26 New Bill Case Files: Records, Water, Bonds, Petitions and the Props 2, 3 and 4 Replacements", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/", tags:["86 bills on the docket","S.B. 277","H.B. 468","S.B. 200"] },
-  { title:"Ten Years of Petition Laws, 2016–2026: Every Change, Graded", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/weber-hive-petition-laws-2016-2026.html", tags:["referendums","initiatives","H.B. 32","signature fraud"] },
 ];
 
 const REPOS = [
