@@ -301,7 +301,7 @@
         <polygon points="50,14 84,32.5 84,67.5 50,86 16,67.5 16,32.5"
           fill="none" stroke="#1a1508" stroke-width="1" stroke-opacity="0.35"/>
         <!-- bee -->
-        <g transform="translate(50,55)">
+        <g id="logoBee" transform="translate(50,55)">
           <!-- wings -->
           <ellipse cx="-13" cy="-14" rx="11" ry="16" fill="rgba(250,247,239,0.65)" stroke="#1a1508" stroke-width="1.2" transform="rotate(-18 -13 -14)"/>
           <ellipse cx="13" cy="-14" rx="11" ry="16" fill="rgba(250,247,239,0.65)" stroke="#1a1508" stroke-width="1.2" transform="rotate(18 13 -14)"/>
@@ -488,6 +488,49 @@ runSearch();
       gc('index-open-'+(name||'home'), (a.textContent||'').trim().slice(0,90));
     }catch(err){}
   });
+})();
+</script>
+
+<script>
+/* Flying bee: on page load the logo's bee flies around the top of the page for about 12 seconds,
+   then lands back on the logo. Tap the flying bee to send it home early.
+   Skipped for visitors who have "reduce motion" turned on. Plays once per visit. */
+(function(){
+  var logoBee=document.getElementById('logoBee'); var mark=document.querySelector('.hex-mark svg'); var hero=document.querySelector('.hive-hero');
+  if(!logoBee||!mark||!hero) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try{ if(sessionStorage.getItem('hiveBeeFlown')) return; sessionStorage.setItem('hiveBeeFlown','1'); }catch(e){}
+  var FLY_MS=12000, LAND_MS=1600;
+  var flyer=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  flyer.setAttribute('viewBox','-30 -40 60 64'); flyer.setAttribute('aria-hidden','true');
+  flyer.style.cssText='position:absolute;left:0;top:0;width:46px;height:49px;z-index:20;pointer-events:auto;cursor:pointer;will-change:transform;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))';
+  var bee=logoBee.cloneNode(true); bee.removeAttribute('id'); bee.setAttribute('transform','');
+  var cp=bee.querySelector('clipPath'); if(cp){cp.id='beeBodyFly'; bee.querySelector('g[clip-path]').setAttribute('clip-path','url(#beeBodyFly)');}
+  var wings=[].slice.call(bee.querySelectorAll('ellipse')).slice(0,2);
+  flyer.appendChild(bee);
+  if(getComputedStyle(hero).position==='static') hero.style.position='relative';
+  hero.appendChild(flyer);
+  logoBee.style.transition='opacity .35s'; logoBee.style.opacity='0';
+  function home(){ var hr=hero.getBoundingClientRect(), mr=mark.getBoundingClientRect(); var sc=mr.width/100;
+    return {x:mr.left-hr.left+50*sc-23, y:mr.top-hr.top+55*sc-30, s:sc*46/46*1.0}; }
+  var t0=null, done=false, early=false, landStart=null, from=null;
+  function wander(t){ var hr=hero.getBoundingClientRect(); var w=hr.width-46, h=Math.max(120,hr.height-60);
+    var a=t/1000; return {x:w*(0.5+0.42*Math.sin(a*0.9)*Math.cos(a*0.37)), y:h*(0.45+0.35*Math.sin(a*1.3+1)*Math.cos(a*0.5)) + 6*Math.sin(a*9)}; }
+  function flap(t){ var k=Math.sin(t/32); wings[0]&&wings[0].setAttribute('transform','rotate('+(-18-28*k)+' -13 -14)'); wings[1]&&wings[1].setAttribute('transform','rotate('+(18+28*k)+' 13 -14)'); }
+  var last=null;
+  function frame(ts){ if(t0===null) t0=ts; var t=ts-t0; var p;
+    if(!early && t<FLY_MS){ p=wander(t); }
+    else { if(landStart===null){ landStart=ts; from=last||wander(t); }
+      var u=Math.min(1,(ts-landStart)/LAND_MS); var e=1-Math.pow(1-u,3); var hm=home();
+      p={x:from.x+(hm.x-from.x)*e, y:from.y+(hm.y-from.y)*e - 40*Math.sin(Math.PI*u)};
+      if(u>=1){ finish(); return; } }
+    var ang = last ? Math.max(-25,Math.min(25,(p.x-last.x)*2)) : 0; last=p;
+    flyer.style.transform='translate('+p.x.toFixed(1)+'px,'+p.y.toFixed(1)+'px) rotate('+ang.toFixed(1)+'deg)';
+    flap(ts); requestAnimationFrame(frame); }
+  function finish(){ if(done) return; done=true; flyer.remove(); logoBee.style.opacity='1'; }
+  flyer.addEventListener('click',function(){ early=true; });
+  requestAnimationFrame(frame);
+  setTimeout(finish, FLY_MS+LAND_MS+3000); /* safety: bee always ends up on the logo */
 })();
 </script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count"
