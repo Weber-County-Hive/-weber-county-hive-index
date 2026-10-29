@@ -2,11 +2,150 @@
 // Both the tips log (tips.html) and the tips map (index.html, tips.html) read from this file.
 // To add a tip: add one entry at the top of "tips" and change "updated". Nothing else needs editing.
 // area = where the tip is ABOUT (a county name like "Weber", "State" for statewide, or "Outside" for outside Utah).
-// r = verified | partly | notfound | checking.  cats = elections money taxtools datacenters land boards.
+// r = verified | partly | notfound | checking.  cats = elections money taxtools datacenters land boards surveillance.
 // link is optional; with no link, the map points to this tip's spot in the log.
 window.HIVE_TIP_LIST={
- "updated": "Oct. 25, 2026",
+ "updated": "Oct. 29, 2026",
  "tips": [
+  {
+   "id": "eagle-mountain-sponsor-agreement",
+   "date": "Oct. 24, 2026",
+   "how": "Private message",
+   "extra": "checked Oct. 24, 2026",
+   "area": "Utah",
+   "r": "partly",
+   "cats": [
+    "elections"
+   ],
+   "claim": "\"Eagle Mountain put waivers, a venue clause and indemnification into the referendum sponsors' agreement.\"",
+   "badge": "Partly verified",
+   "points": [
+    "<b>The law:</b> Utah Code 20A-7-604 says the agreement specifies the packet type and the packet numbers. It lists no other terms.",
+    "<b>Confirmed:</b> the city's version added more, including a sole-remedy clause, a court-venue clause (Fourth District, Utah County) and a notarized signature (city emails and drafts, Sept. 28 and Oct. 5).",
+    "<b>Corrected:</b> a jury-trial waiver was in the Sept. 28 draft and was removed Oct. 5. No version the Hive read has an indemnification clause.",
+    "<b>Not settled by the records:</b> whether a city may add terms the statute doesn't list. That is a legal question."
+   ],
+   "link": "https://webercountyhive.substack.com/p/two-terms-the-law-requires-a-contract",
+   "linkText": "Read the article →",
+   "came": "Article published Oct. 25, 2026"
+  },
+  {
+   "id": "roy-officer-merit-raises",
+   "date": "Oct. 19, 2026",
+   "how": "Private message",
+   "extra": "",
+   "area": "Weber",
+   "r": "partly",
+   "cats": [
+    "boards",
+    "money"
+   ],
+   "claim": "\"A city put merit raises for its top officers on the agenda, and the agenda shows it hadn't followed the 2024 law.\"",
+   "badge": "Partly verified",
+   "points": [
+    "<b>Confirmed:</b> the city is Roy. Ordinance 26-15, \"Enacting Compensation Increases for Specific City Officers,\" lists merit increases of up to 2.5% and 3.75% (Roy City Council packet).",
+    "<b>The law:</b> S.B. 91 (2024) requires a separate public hearing, noticed at least 7 days ahead, before a budget raises pay for executive city officers (Utah Code 10-3-818). Roy noticed that hearing on Oct. 8, 12 days ahead.",
+    "<b>Related:</b> a tip also brought the city's one-page 2024 salary survey, now public. The Hive checked its math.",
+    "<b>Still checking:</b> whether officer raises given since 2024 went through that hearing."
+   ],
+   "link": "https://webercountyhive.substack.com/p/roys-14-the-one-page-sheet-behind",
+   "linkText": "Read \"Roy's 14%\" →",
+   "came": "In \"Roy's 14%\" (Oct. 27, 2026)"
+  },
+  {
+   "id": "sd21-mailer-no-paid-for",
+   "date": "Oct. 24, 2026",
+   "how": "Private message (photos)",
+   "extra": "",
+   "area": "Utah",
+   "r": "checking",
+   "cats": [
+    "elections",
+    "money"
+   ],
+   "claim": "\"A mailer against Sen. Brady Brammer in Senate District 21 has no 'paid for by' line.\"",
+   "badge": "Still checking",
+   "points": [
+    "<b>The law:</b> Utah Code 20A-11-901 says a mailer that urges a candidate's defeat, and isn't authorized by a candidate, must say who paid for it and that no candidate authorized it.",
+    "<b>Checked:</b> the group on the return address was not found as a registered PAC, PIC or corporation in 2026 state disclosure filings (disclosures.utah.gov, searched Oct. 24, 2026).",
+    "<b>Still checking:</b> the Hive has seen photos of the mailer, not the mailer itself. No disclosure line shows in the photos."
+   ],
+   "came": "Still being checked"
+  },
+  {
+   "id": "utah-county-id-cards",
+   "date": "Oct. 24, 2026",
+   "how": "Email tip (forwarded post)",
+   "extra": "",
+   "area": "Utah",
+   "r": "checking",
+   "cats": [
+    "elections"
+   ],
+   "claim": "\"The Utah County Clerk sent some voters an 'ID Required' card they didn't need.\"",
+   "badge": "Still checking",
+   "points": [
+    "The forwarded post cites a Salt Lake Tribune story (Oct. 23, 2026). The Hive hasn't been able to read that story yet.",
+    "<b>Still checking</b> against Utah County Elections' own notices. Any voter can check their ballot's status at trackmyballot.utah.gov."
+   ],
+   "came": "Still being checked"
+  },
+  {
+   "id": "flock-roseville-misreads",
+   "date": "Oct. 24, 2026",
+   "how": "Private message (shared video)",
+   "extra": "",
+   "area": "Outside",
+   "r": "verified",
+   "cats": [
+    "surveillance"
+   ],
+   "claim": "\"Flock's cameras in Roseville, Calif. misread plates 71% of the time.\"",
+   "badge": "Verified",
+   "points": [
+    "<b>Confirmed:</b> Roseville's records show 1,427 alerts in 2023–24. 71% of the felony and stolen-vehicle alerts were misreads (Gizmodo, July 31, 2026).",
+    "<b>Both sides:</b> Flock calls it a mischaracterization: older hardware, nonstandard mounting, mostly before 2025. Roseville says no stops or arrests came from the bad reads."
+   ],
+   "came": "Added to the Hive's Flock harms tally"
+  },
+  {
+   "id": "flock-coweta-search-37",
+   "date": "Oct. 25, 2026",
+   "how": "Private message (shared video)",
+   "extra": "",
+   "area": "Outside",
+   "r": "partly",
+   "cats": [
+    "surveillance"
+   ],
+   "claim": "\"A man who sued the sheriff was then searched in Flock thousands of times, with the reason '37.'\"",
+   "badge": "Partly verified",
+   "points": [
+    "<b>Confirmed it was filed:</b> a proposed class action in federal court in Georgia against Flock, Coweta County and Sheriff Lenn Wood (Gizmodo, Oct. 13, 2026).",
+    "<b>Corrected:</b> the complaint says his car was searched 5 times, May–Nov. 2025, each across 6,000+ agency networks, with reasons like \"info\" and \"37.\" The \"thousands\" were one operator's searches overall, only four with a case number.",
+    "<b>Not decided:</b> these are allegations. The court hasn't ruled and no class is certified."
+   ],
+   "came": "Added to the Hive's Flock misuse list"
+  },
+  {
+   "id": "flock-safe-list",
+   "date": "Oct. 25, 2026",
+   "how": "Private message (shared video)",
+   "extra": "",
+   "area": "Outside",
+   "r": "partly",
+   "cats": [
+    "surveillance"
+   ],
+   "claim": "\"Flock offered police a 'Safe List' to keep certain cars out of searches.\"",
+   "badge": "Partly verified",
+   "points": [
+    "<b>Confirmed:</b> records from Maryville, Tenn. show 3 plates on a police-side list that suppressed alerts, with no names or explanation (InvestigateTV, Oct. 12, 2026, as reported by GadgetReview).",
+    "<b>Flock's answer:</b> it once offered a Safe List to some police customers and removed it for low use. It says Maryville's entries stop repeat misread alerts. The police chief said the same.",
+    "<b>Not shown:</b> whether those cars were still photographed and stored."
+   ],
+   "came": "Checked; result in the tips log"
+  },
   {
    "id": "eagle-mountain-referendum",
    "date": "Oct. 8, 2026",

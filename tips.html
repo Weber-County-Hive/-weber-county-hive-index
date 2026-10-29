@@ -113,6 +113,9 @@
       <p class="tm-dek">Readers send tips, and people post claims in public. Here is where each one was about, what we checked, and what came of it.</p>
       <div id="tips-map-root"><noscript>See the full list on the <a href="tips.html">tips log</a>.</noscript></div>
     </section>
+<h2 id="by-county">Tips by county</h2>
+  <p>Every checked tip, filed under where it is about. Tap a county to open it, then tap a tip to see what we checked and what came of it.</p>
+  <div id="tips-directory"><noscript><p>The directory needs JavaScript turned on. See <a href="#log">the log</a> below.</p></noscript></div>
 <h2 id="send">Send a tip</h2>
   <p>Found a document, a vote, a filing or a project we should look at? Send it. Links and documents help the most.</p>
   <div class="send">
@@ -131,6 +134,7 @@
     <button type="button" data-g="c" data-v="datacenters" aria-pressed="false">Data centers &amp; energy</button>
     <button type="button" data-g="c" data-v="land" aria-pressed="false">Land &amp; water</button>
     <button type="button" data-g="c" data-v="boards" aria-pressed="false">Boards &amp; unelected power</button>
+    <button type="button" data-g="c" data-v="surveillance" aria-pressed="false">Surveillance (Flock, cameras)</button>
   </div>
   <div class="filters" role="group" aria-label="Filter by result">
     <span class="lab">Result</span>
@@ -154,7 +158,7 @@
 <script src="tips-data.js"></script>
 <script>
 (function(){
-  var L={elections:'Elections &amp; ballot measures',money:'Campaign money &amp; PACs',taxtools:'Tax tools (PID, TIF, CRA, UIPA, MIDA)',datacenters:'Data centers &amp; energy',land:'Land &amp; water',boards:'Boards &amp; unelected power'};
+  var L={elections:'Elections &amp; ballot measures',money:'Campaign money &amp; PACs',taxtools:'Tax tools (PID, TIF, CRA, UIPA, MIDA)',datacenters:'Data centers &amp; energy',land:'Land &amp; water',boards:'Boards &amp; unelected power',surveillance:'Surveillance (Flock, cameras)'};
   var D=window.HIVE_TIP_LIST, box=document.getElementById('log'); if(!D||!box) return;
   box.innerHTML=D.tips.map(function(t){
     return '<article class="tip" id="tip-'+t.id+'" data-r="'+t.r+'" data-c="'+t.cats.join(' ')+'">'+
@@ -196,6 +200,8 @@
 <script data-goatcounter="https://weberhive.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 <script src="tips-map.js"></script>
+<script src="tips-directory.js"></script>
+<script>try{renderHiveTipsDirectory(document.getElementById("tips-directory"));}catch(e){}</script>
 <script>try{renderHiveTipsMap(document.getElementById("tips-map-root"),{noSend:true});}catch(e){}</script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const HIVE_TIPS={"counties":[{"n":"Davis","c":[40.952,-112.002],"g":{"type":"Pol
 (function(){
   function el(t,a,h){const e=document.createElement(t);for(const k in (a||{}))e.setAttribute(k,a[k]);if(h!=null)e.innerHTML=h;return e;}
   const R={verified:['Verified','#1f6f43'],partly:['Partly verified','#8a5a00'],notfound:['Not found in records','#8f2a2a'],checking:['Still checking','#3a5f7d']};
-  const L={elections:'Elections & ballot measures',money:'Campaign money & PACs',taxtools:'Tax tools',datacenters:'Data centers & energy',land:'Land & water',boards:'Boards & unelected power'};
+  const L={elections:'Elections & ballot measures',money:'Campaign money & PACs',taxtools:'Tax tools',datacenters:'Data centers & energy',land:'Land & water',boards:'Boards & unelected power',surveillance:'Surveillance (Flock, cameras)'};
   const TIP_FORM='tip.html';
   window.renderHiveTipsMap=function(root,opts){
     opts=opts||{};
