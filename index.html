@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -279,9 +280,45 @@
 .tm-res a{color:#3a5f7d;font-weight:600;}
 .tm-badge{display:inline-block;color:#fff;font-size:.85rem;font-weight:700;padding:3px 9px;border-radius:4px;margin-right:6px;}
 .tm-note{font-size:.98rem;color:#5b5850;margin-top:12px;}
+/* Utah Hive Politics branding bars (top and bottom) */
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+.hb-line-top{display:block;font-family:Georgia,serif;color:#e8d9b5;font-size:13px;margin-top:4px}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none}
+.hb-btn2{background:transparent;color:#d4af37}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+@media(max-width:600px){.hb-line-top{font-size:11.5px}}
+
+.hl-slim{background:#17130c;color:#c9a96a;padding:9px 20px;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;border-bottom:1px solid #3a2f1c}
+.hl-slim a{color:#efe6cc;text-decoration:none}
+.hl-dates{position:relative;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#c9a96a;margin-top:14px;letter-spacing:.04em}
+.hl-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.hl-where{border:3px solid #17130c;border-radius:10px;overflow:hidden;background:#fff}
+.hl-where-h{background:#17130c;color:#efe6cc;padding:12px 18px}
+.hl-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#d4af37}
+.hl-where-h .pl{font-family:'Playfair Display',serif;font-size:1.35rem;color:#fff;margin-top:2px}
+.hl-who{margin:14px 16px 16px;border:2px solid #9c7620;border-radius:8px}
+.hl-who-h{background:#f3e7c4;color:#6d520f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9c7620}
+.hl-who ul{margin:0;padding:10px 16px 12px 34px;font-size:1.02rem;line-height:1.5}
+.hl-who li{margin:4px 0}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="hive-bee.png">
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="hl-slim"><span>Hive library · HL 000.00 · Master index</span><span><a href="tips.html">Tips we checked</a> · <a href="tips.html#send">Send a tip</a></span></div>
 
   <div class="hive-hero">
     <div class="hex-mark">
@@ -332,13 +369,16 @@
     </h1>
     <p class="hive-sub">Every investigation, docket, and interactive built by The Weber County Hive — one place to find any of it.</p>
     <p class="hive-sub" style="font-weight:700;margin-top:6px">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</p>
+    <div class="hl-dates">Posted Aug. 25, 2026 · Updated Oct. 31, 2026 · Call number HL 000.00</div>
   </div>
+<div class="hl-ww"><div class="hl-where"><div class="hl-where-h"><div class="hl-lbl">WHERE</div><div class="pl">Utah — statewide, with Weber County at home</div></div><div class="hl-who"><div class="hl-who-h">WHO</div><ul><li><b>The Weber County Hive</b> — Weber County government, elections, money and development</li><li><b>Utah Hive Politics</b> — the statewide work: the Legislature, state boards and other counties</li><li><b>Every Hive project</b> — shelved below by subject; each card opens that project's own index</li><li><b>Readers</b> — <a href="tips.html">tips and comments we checked</a>; tipster names are never published</li></ul></div></div></div>
 
   <div class="wrap">
     <div class="search-row">
-      <input type="search" id="hive-search" placeholder="Search projects and new case files — try Meta, PID, Schultz…" aria-label="Search projects and case files">
+      <input type="search" id="hive-search" placeholder="Search projects, case files or a call number — try Meta, PID, Schultz, UP 200.02" aria-label="Search projects and case files">
       <span class="search-count" id="search-count"></span>
     </div>
+    <p id="hl-callhit" style="display:none;max-width:620px;margin:-28px auto 32px;font-family:'Inter',sans-serif;font-size:1rem;background:#faf7ef;border:1px solid #ddd6c4;border-left:5px solid #d4af37;border-radius:6px;padding:10px 14px"></p>
 
     <section style="margin:0 auto 40px;max-width:900px;background:var(--hive-dark);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;">
       <div style="color:#efe6cc;max-width:560px;">
@@ -376,9 +416,10 @@
         fill="none" stroke="var(--ink-dimmer)" stroke-width="3"/>
     </svg>
     <div>Read the full investigations on <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive Substack →</a></div>
-    <div class="footer-sub">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group.</div>
     <div class="footer-sub">Public records, primary sources, no speculation.</div>
   </footer>
+<div class="hl-shelfwrap"><div class="in"><div id="hive-shelf"></div></div></div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="https://webercountyhive.substack.com/" style="color:#d4af37">webercountyhive.substack.com</a></p></div>
 
 <script src="weber-hive-master-data.js?v=10"></script>
 <script>
@@ -471,8 +512,15 @@ function runSearch(){
   document.getElementById('no-results').style.display = shown ? 'none' : 'block';
   countEl.textContent = q ? shown + ' match' + (shown === 1 ? '' : 'es') : (REPOS.length + ' projects');
 }
+function callHit(){
+  const el=document.getElementById('hl-callhit'); if(!el||!window.hiveCallLookup) return;
+  const h=window.hiveCallLookup(input.value); el.style.display=h?'block':'none'; if(h) el.innerHTML=h.html;
+}
 input.addEventListener('input', runSearch);
+input.addEventListener('input', callHit);
+const fromUrl = new URLSearchParams(location.search).get('q'); if(fromUrl){ input.value = fromUrl; }
 runSearch();
+window.addEventListener('load', callHit);
 </script>
 <script>
 // Click counting for GoatCounter: each click on a project or case file is counted
@@ -533,10 +581,12 @@ runSearch();
   setTimeout(finish, FLY_MS+LAND_MS+3000); /* safety: bee always ends up on the logo */
 })();
 </script>
-<script data-goatcounter="https://weberhive.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
 <script src="tips-data.js"></script>
 <script src="tips-map.js"></script>
 <script>try{renderHiveTipsMap(document.getElementById("tips-map-root"));}catch(e){}</script>
+<script src="hive-shelf.js?v=1"></script>
+
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

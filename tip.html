@@ -11,14 +11,58 @@
   body{margin:0;background:#ffffff;color:#14213d;font-family:Georgia,serif;font-size:22px;line-height:1.5;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box}
   a{color:#1d4ed8;font-weight:700}
   .box{max-width:560px}
+/* Utah Hive Politics branding bars (top and bottom) */
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+.hb-line-top{display:block;font-family:Georgia,serif;color:#e8d9b5;font-size:13px;margin-top:4px}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none}
+.hb-btn2{background:transparent;color:#d4af37}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+@media(max-width:600px){.hb-line-top{font-size:11.5px}}
+
+.hl-slim{background:#17130c;color:#c9a96a;padding:9px 20px;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;border-bottom:1px solid #3a2f1c}
+.hl-slim a{color:#efe6cc;text-decoration:none}
+.hl-dates{position:relative;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#c9a96a;margin-top:14px;letter-spacing:.04em}
+.hl-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.hl-where{border:3px solid #17130c;border-radius:10px;overflow:hidden;background:#fff}
+.hl-where-h{background:#17130c;color:#efe6cc;padding:12px 18px}
+.hl-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#d4af37}
+.hl-where-h .pl{font-family:'Playfair Display',serif;font-size:1.35rem;color:#fff;margin-top:2px}
+.hl-who{margin:14px 16px 16px;border:2px solid #9c7620;border-radius:8px}
+.hl-who-h{background:#f3e7c4;color:#6d520f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9c7620}
+.hl-who ul{margin:0;padding:10px 16px 12px 34px;font-size:1.02rem;line-height:1.5}
+.hl-who li{margin:4px 0}
+
+  body.tipbody{display:block;padding:0;min-height:0}
+  .tipbody .hb-bar,.tipbody .hl-slim{text-align:left}.tipbody .hb-bar a{font-weight:400}
+  .tipmain{display:flex;align-items:center;justify-content:center;min-height:50vh;padding:24px 16px}
 </style>
+<link rel="icon" type="image/png" href="hive-bee.png">
 </head>
-<body>
+<body class="tipbody">
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="hl-slim"><span>Hive library · HL 000.02 · Send a tip</span><span><a href="index.html">← Hive library</a> · <a href="tips.html">Tips we checked</a></span></div>
+<div class="tipmain">
 <div class="box">
   <p>Opening the tip form…</p>
   <p>If it doesn't open, <a id="go" href="https://docs.google.com/forms/d/1bUoiX6tYDswrb2x9oR9eeoUK-UI9740652i4uKcXJgE/viewform">tap here to send a tip</a>.</p>
   <p style="font-size:18px;color:#475569">You can stay anonymous. We never publish who sent a tip without your OK.</p>
+  <p style="font-size:15px;color:#475569;font-family:'IBM Plex Mono',monospace">Posted Oct. 7, 2026 · Updated Oct. 31, 2026 · Call number HL 000.02</p>
 </div>
+</div>
+<div class="hl-shelfwrap"><div class="in"><div id="hive-shelf"></div></div></div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="https://webercountyhive.substack.com/" style="color:#d4af37">webercountyhive.substack.com</a></p></div>
 <script>
 // Counts one visit (date, time, page, general source; no cookies, no personal data) then opens the form.
 (function(){
@@ -33,6 +77,8 @@
   setTimeout(function(){ window.location.replace(FORM); }, 400);
 })();
 </script>
+<script src="hive-shelf.js?v=1"></script>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
