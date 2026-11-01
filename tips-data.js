@@ -5,7 +5,7 @@
 // r = verified | partly | notfound | checking.  cats = elections money taxtools datacenters land boards surveillance.
 // link is optional; with no link, the map points to this tip's spot in the log.
 window.HIVE_TIP_LIST={
- "updated": "Oct. 29, 2026",
+ "updated": "Nov. 1, 2026",
  "tips": [
   {
    "id": "eagle-mountain-sponsor-agreement",
@@ -68,6 +68,7 @@ window.HIVE_TIP_LIST={
    "points": [
     "<b>The law:</b> Utah Code 20A-11-901 says a mailer that urges a candidate's defeat, and isn't authorized by a candidate, must say who paid for it and that no candidate authorized it.",
     "<b>Checked:</b> the group on the return address was not found as a registered PAC, PIC or corporation in 2026 state disclosure filings (disclosures.utah.gov, searched Oct. 24, 2026).",
+    "<b>Also checked:</b> no Utah business registration matches the group's name, and no federal (FEC) committee by that name. The FEC's processed independent-expenditure reports show none by the person on the return address in 2026 (fec.gov, searched Oct. 27, 2026). The newest FEC filings not yet processed could not be searched by name.",
     "<b>Still checking:</b> the Hive has seen photos of the mailer, not the mailer itself. No disclosure line shows in the photos."
    ],
    "came": "Still being checked"

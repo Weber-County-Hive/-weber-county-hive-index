@@ -8,10 +8,12 @@ var HIVE_LIBRARY_PAGES = [
 ];
 /* Shelves in other repos that already have call numbers. A call number typed
    here opens that repo's shelf with the search filled in. */
-var HIVE_CALL_SHELVES = {
-  HL: { name: "Hive library", url: "index.html" },
-  UP: { name: "Unelected Power", url: "https://weber-county-hive.github.io/Unelected-Power/index.html" }
-};
+/* Shelves with call numbers come from the one shared list, hive-shelves.js.
+   Add a repo there and every Hive page's call-number search knows it. */
+var HIVE_CALL_SHELVES = { HL: { name: "Hive library", url: "index.html" } };
+(window.HIVE_SHELVES || []).forEach(function (s) {
+  if (s.prefix !== "HL") HIVE_CALL_SHELVES[s.prefix] = { name: s.name, url: s.url };
+});
 (function () {
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var list = HIVE_LIBRARY_PAGES.slice();
