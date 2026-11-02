@@ -25,5 +25,6 @@ window.HIVE_SHELVES = [
   { prefix: "ED", name: "Education", url: "https://weber-county-hive.github.io/Education/index.html" },
   { prefix: "AU", name: "Audits", url: "https://weber-county-hive.github.io/audits/index.html" },
   { prefix: "LE", name: "Letters & Essays to the Collective", url: "https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/index.html" },
-  { prefix: "GS", name: "Great Salt Lake Docket", url: "https://weber-county-hive.github.io/Great-Salt-Lake/index.html" }
+  { prefix: "GS", name: "Great Salt Lake Docket", url: "https://weber-county-hive.github.io/Great-Salt-Lake/index.html" },
+  { prefix: "UM", name: "Utah Maps", url: "https://weber-county-hive.github.io/utah-maps/index.html" }
 ];
