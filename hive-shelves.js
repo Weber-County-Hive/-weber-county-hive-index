@@ -17,5 +17,6 @@ window.HIVE_SHELVES = [
   { prefix: "SP", name: "Utah Hive News Spotlights", url: "https://weber-county-hive.github.io/Utah-hive-news-spotlights/index.html" },
   { prefix: "UH", name: "Utah House Directory", url: "https://weber-county-hive.github.io/Utah-House/index.html" },
   { prefix: "US", name: "Utah Senators", url: "https://weber-county-hive.github.io/utah-senators/index.html" },
-  { prefix: "UI", name: "UIPA Investigation Series", url: "https://webercountyhive-coder.github.io/UIPA/index.html" }
+  { prefix: "UI", name: "UIPA Investigation Series", url: "https://webercountyhive-coder.github.io/UIPA/index.html" },
+  { prefix: "BW", name: "Bait and Switch: Bills That Did the Opposite", url: "https://weber-county-hive.github.io/bait-and-switch/index.html" }
 ];
