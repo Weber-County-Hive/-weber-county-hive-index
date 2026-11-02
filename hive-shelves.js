@@ -23,5 +23,6 @@ window.HIVE_SHELVES = [
   { prefix: "PB", name: "Politics for Beginners", url: "https://weber-county-hive.github.io/politics-for-begginers/index.html" },
   { prefix: "SB", name: "The Sunday Buzz", url: "https://weber-county-hive.github.io/sunday_buzz/index.html" },
   { prefix: "ED", name: "Education", url: "https://weber-county-hive.github.io/Education/index.html" },
-  { prefix: "AU", name: "Audits", url: "https://weber-county-hive.github.io/audits/index.html" }
+  { prefix: "AU", name: "Audits", url: "https://weber-county-hive.github.io/audits/index.html" },
+  { prefix: "LE", name: "Letters & Essays to the Collective", url: "https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/index.html" }
 ];
