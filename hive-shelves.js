@@ -12,5 +12,6 @@ window.HIVE_SHELVES = [
   { prefix: "VQ", name: "Voter Quick Scan 2026", url: "https://weber-county-hive.github.io/Voter-Quick-Scan-2026/index.html" },
   { prefix: "CO", name: "County Officials", url: "https://webercountyhive-coder.github.io/countyofficials/index.html" },
   { prefix: "CW", name: "County Watch", url: "https://weber-county-hive.github.io/countywatch/index.html" },
-  { prefix: "BS", name: "Both Sides of the Table", url: "https://weber-county-hive.github.io/bothsidesofthetable/index.html" }
+  { prefix: "BS", name: "Both Sides of the Table", url: "https://weber-county-hive.github.io/bothsidesofthetable/index.html" },
+  { prefix: "NE", name: "Nuclear Energy", url: "https://webercountyhive-coder.github.io/Nuclear-Energy/index.html" }
 ];
