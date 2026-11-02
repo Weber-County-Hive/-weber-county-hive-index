@@ -29,5 +29,6 @@ window.HIVE_SHELVES = [
   { prefix: "UM", name: "Utah Maps", url: "https://weber-county-hive.github.io/utah-maps/index.html" },
   { prefix: "TX", name: "Taxation", url: "https://weber-county-hive.github.io/Taxation/index.html" },
   { prefix: "CM", name: "Committees Board", url: "https://weber-county-hive.github.io/committees/index.html" },
-  { prefix: "CC", name: "Community Calendar", url: "https://weber-county-hive.github.io/community-calendar/index.html" }
+  { prefix: "CC", name: "Community Calendar", url: "https://weber-county-hive.github.io/community-calendar/index.html" },
+  { prefix: "SV", name: "Surveillance Series", url: "https://weber-county-hive.github.io/Surveillance/index.html" }
 ];
