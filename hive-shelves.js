@@ -16,5 +16,6 @@ window.HIVE_SHELVES = [
   { prefix: "NE", name: "Nuclear Energy", url: "https://webercountyhive-coder.github.io/Nuclear-Energy/index.html" },
   { prefix: "SP", name: "Utah Hive News Spotlights", url: "https://weber-county-hive.github.io/Utah-hive-news-spotlights/index.html" },
   { prefix: "UH", name: "Utah House Directory", url: "https://weber-county-hive.github.io/Utah-House/index.html" },
-  { prefix: "US", name: "Utah Senators", url: "https://weber-county-hive.github.io/utah-senators/index.html" }
+  { prefix: "US", name: "Utah Senators", url: "https://weber-county-hive.github.io/utah-senators/index.html" },
+  { prefix: "UI", name: "UIPA Investigation Series", url: "https://webercountyhive-coder.github.io/UIPA/index.html" }
 ];
