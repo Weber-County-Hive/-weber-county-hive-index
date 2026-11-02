@@ -8,5 +8,6 @@ window.HIVE_SHELVES = [
   { prefix: "FD", name: "Follow the Deed", url: "https://weber-county-hive.github.io/followthedeed/index.html" },
   { prefix: "GR", name: "Graphics library", url: "https://weber-county-hive.github.io/graphics/index.html" },
   { prefix: "GV", name: "GSL-Votes", url: "https://weber-county-hive.github.io/GSL-Votes/index.html" },
-  { prefix: "DR", name: "Drawn From the Record", url: "https://weber-county-hive.github.io/Drawn-From-the-Record/index.html" }
+  { prefix: "DR", name: "Drawn From the Record", url: "https://weber-county-hive.github.io/Drawn-From-the-Record/index.html" },
+  { prefix: "VQ", name: "Voter Quick Scan 2026", url: "https://weber-county-hive.github.io/Voter-Quick-Scan-2026/index.html" }
 ];
