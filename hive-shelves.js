@@ -20,5 +20,6 @@ window.HIVE_SHELVES = [
   { prefix: "UI", name: "UIPA Investigation Series", url: "https://webercountyhive-coder.github.io/UIPA/index.html" },
   { prefix: "BW", name: "Bait and Switch: Bills That Did the Opposite", url: "https://weber-county-hive.github.io/bait-and-switch/index.html" },
   { prefix: "PL", name: "Public Lands", url: "https://weber-county-hive.github.io/public-lands/index.html" },
-  { prefix: "PB", name: "Politics for Beginners", url: "https://weber-county-hive.github.io/politics-for-begginers/index.html" }
+  { prefix: "PB", name: "Politics for Beginners", url: "https://weber-county-hive.github.io/politics-for-begginers/index.html" },
+  { prefix: "SB", name: "The Sunday Buzz", url: "https://weber-county-hive.github.io/sunday_buzz/index.html" }
 ];
