@@ -30,5 +30,6 @@ window.HIVE_SHELVES = [
   { prefix: "TX", name: "Taxation", url: "https://weber-county-hive.github.io/Taxation/index.html" },
   { prefix: "CM", name: "Committees Board", url: "https://weber-county-hive.github.io/committees/index.html" },
   { prefix: "CC", name: "Community Calendar", url: "https://weber-county-hive.github.io/community-calendar/index.html" },
-  { prefix: "SV", name: "Surveillance Series", url: "https://weber-county-hive.github.io/Surveillance/index.html" }
+  { prefix: "SV", name: "Surveillance Series", url: "https://weber-county-hive.github.io/Surveillance/index.html" },
+  { prefix: "PC", name: "PAC docket", url: "https://weber-county-hive.github.io/pac/index.html" }
 ];
