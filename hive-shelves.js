@@ -14,5 +14,6 @@ window.HIVE_SHELVES = [
   { prefix: "CW", name: "County Watch", url: "https://weber-county-hive.github.io/countywatch/index.html" },
   { prefix: "BS", name: "Both Sides of the Table", url: "https://weber-county-hive.github.io/bothsidesofthetable/index.html" },
   { prefix: "NE", name: "Nuclear Energy", url: "https://webercountyhive-coder.github.io/Nuclear-Energy/index.html" },
-  { prefix: "SP", name: "Utah Hive News Spotlights", url: "https://weber-county-hive.github.io/Utah-hive-news-spotlights/index.html" }
+  { prefix: "SP", name: "Utah Hive News Spotlights", url: "https://weber-county-hive.github.io/Utah-hive-news-spotlights/index.html" },
+  { prefix: "UH", name: "Utah House Directory", url: "https://weber-county-hive.github.io/Utah-House/index.html" }
 ];
