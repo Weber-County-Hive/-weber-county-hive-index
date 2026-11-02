@@ -32,5 +32,6 @@ window.HIVE_SHELVES = [
   { prefix: "CC", name: "Community Calendar", url: "https://weber-county-hive.github.io/community-calendar/index.html" },
   { prefix: "SV", name: "Surveillance Series", url: "https://weber-county-hive.github.io/Surveillance/index.html" },
   { prefix: "PC", name: "PAC docket", url: "https://weber-county-hive.github.io/pac/index.html" },
-  { prefix: "PD", name: "PIDS-Utah", url: "https://weber-county-hive.github.io/PIDS-Utah/index.html" }
+  { prefix: "PD", name: "PIDS-Utah", url: "https://weber-county-hive.github.io/PIDS-Utah/index.html" },
+  { prefix: "DC", name: "Data Centers", url: "https://webercountyhive-coder.github.io/Data-Centers/index.html" }
 ];
