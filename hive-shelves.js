@@ -7,5 +7,6 @@ window.HIVE_SHELVES = [
   { prefix: "UP", name: "Unelected Power", url: "https://weber-county-hive.github.io/Unelected-Power/index.html" },
   { prefix: "FD", name: "Follow the Deed", url: "https://weber-county-hive.github.io/followthedeed/index.html" },
   { prefix: "GR", name: "Graphics library", url: "https://weber-county-hive.github.io/graphics/index.html" },
-  { prefix: "GV", name: "GSL-Votes", url: "https://weber-county-hive.github.io/GSL-Votes/index.html" }
+  { prefix: "GV", name: "GSL-Votes", url: "https://weber-county-hive.github.io/GSL-Votes/index.html" },
+  { prefix: "DR", name: "Drawn From the Record", url: "https://weber-county-hive.github.io/Drawn-From-the-Record/index.html" }
 ];
