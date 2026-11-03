@@ -34,5 +34,6 @@ window.HIVE_SHELVES = [
   { prefix: "PC", name: "PAC docket", url: "https://weber-county-hive.github.io/pac/index.html" },
   { prefix: "PD", name: "PIDS-Utah", url: "https://weber-county-hive.github.io/PIDS-Utah/index.html" },
   { prefix: "DC", name: "Data Centers", url: "https://webercountyhive-coder.github.io/Data-Centers/index.html" },
-  { prefix: "RF", name: "Referendum Docket", url: "https://webercountyhive-coder.github.io/referendum/index.html" }
+  { prefix: "RF", name: "Referendum Docket", url: "https://webercountyhive-coder.github.io/referendum/index.html" },
+  { prefix: "TR", name: "Transparency", url: "https://weber-county-hive.github.io/Transparency/index.html" }
 ];
