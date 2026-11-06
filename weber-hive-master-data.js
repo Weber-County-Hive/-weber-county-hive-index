@@ -7,12 +7,12 @@
 // Nothing else on the page needs to change.
 
 const LATEST = [
+  { title:"Government in Court: Nine Utah Cases Where Agencies and Officials Are Taken to Court", project:"Government in Court", date:"Nov 6, 2026", url:"https://webercountyhive-coder.github.io/GOVERNMENT-IN-COURT/", tags:["Utah AG's Office","MIDA","Prop 4","Ogden Valley"] },
+  { title:"Ogden City: The Gibson Avenue Land Sale, Lobbying, Project Areas and More", project:"Ogden City", date:"Nov 6, 2026", url:"https://weber-county-hive.github.io/Ogden-City/", tags:["Ogden RDA","Gibson Ave.","Lobbying","Tax increment"] },
   { title:"Public Notice Watch: Weber Basin's $175M Bonds, Plan Ogden, a Clyde Water Settlement and West Haven's 21 South (hearings Oct. 29 to Nov. 10)", project:"Community Calendar", date:"Oct 27, 2026", url:"https://weber-county-hive.github.io/community-calendar/politics.html", tags:["Weber Basin","Plan Ogden","RLW/Clyde","West Haven","Public notices"] },
   { title:"Rep. Jason Kyle and the Great Salt Lake: Every Vote, 2023–2026", project:"GSL-Votes", date:"Oct 25, 2026", url:"https://weber-county-hive.github.io/GSL-Votes/", tags:["Jason Kyle","HD-8","Great Salt Lake","64 water votes"] },
   { title:"The Ledger: Clyde Companies Political Giving, 2018–2026", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/clyde-companies-giving.html", tags:["Clyde Companies","Spencer Cox","$461,104.81","Our Schools Now"] },
   { title:"The Ledger: Taxpayers PAC and the 2025 Ogden Council Races", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/taxpayers-pac-ogden-2025.html", tags:["Taxpayers PAC","Ogden City Council","Weber County"] },
-  { title:"The Ledger: Energy Overlap, PAC Officers and Confirmed Oil Money", project:"PAC Money-Flow Ledger", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger-energy-overlap-pac-officers.html", tags:["Kyle Palmer","Irish Elk LLC","Big West Oil","energy money"] },
-  { title:"26 New Bill Case Files: Records, Water, Bonds, Petitions and the Props 2, 3 and 4 Replacements", project:"Bill-Tracker", date:"Oct 19, 2026", url:"https://weber-county-hive.github.io/Bill-Tracker/", tags:["86 bills on the docket","S.B. 277","H.B. 468","S.B. 200"] },
 ];
 
 const REPOS = [
@@ -51,4 +51,6 @@ const REPOS = [
   { title:"Bait and Switch", desc:"Bills that start as one thing and morph in plain sight: bills that changed name, scope or key language between introduction and law.", url:"https://weber-county-hive.github.io/bait-and-switch/weber-hive-bait-and-switch.html", color:"#7a3a1f", group:"legislature" },
   { title:"Nuclear Energy", desc:"The laws, permits, boards and sites behind Utah's nuclear buildout, from the public record: the bills, the federal permits a project needs (NRC, DOE, Department of War), the Nuclear Energy Consortium and its people, and the sites so far, each with a plain-words version.", url:"https://webercountyhive-coder.github.io/Nuclear-Energy/", color:"#0f5560", group:"land" },
   { title:"GSL-Votes", desc:"How Utah legislators voted on Great Salt Lake and water bills, checked against the Legislature's own roll calls and graded on the Hive's rubric. First up: Rep. Jason Kyle, every water vote 2023–2026.", url:"https://weber-county-hive.github.io/GSL-Votes/", color:"#1f4e6b", group:"legislature" },
+  { title:"Ogden City", desc:"Ogden City government from the public record: the Gibson Avenue land sale, the mayor's home value, lobbying and grants, Redevelopment Agency project areas, water rates, housing, jobs and who pays.", url:"https://weber-county-hive.github.io/Ogden-City/", color:"#0E5E63", group:"oversight" },
+  { title:"Government in Court", desc:"A statewide docket of court cases where a Utah government, agency or official is sued or challenged. Each case keeps what each side says apart from what the records show, and tracks where it stands.", url:"https://webercountyhive-coder.github.io/GOVERNMENT-IN-COURT/", color:"#1E3A8A", group:"oversight" },
 ];
