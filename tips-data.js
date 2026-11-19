@@ -5,8 +5,35 @@
 // r = verified | partly | notfound | checking.  cats = elections money taxtools datacenters land boards surveillance.
 // link is optional; with no link, the map points to this tip's spot in the log.
 window.HIVE_TIP_LIST={
- "updated": "Nov. 1, 2026",
+ "updated": "Nov. 19, 2026",
  "tips": [
+  {
+   "id": "ivory-overland-school-trust",
+   "date": "Nov. 13, 2026",
+   "how": "Email",
+   "extra": "checked Nov. 16–19, 2026",
+   "area": "Utah",
+   "r": "partly",
+   "cats": [
+    "land",
+    "boards"
+   ],
+   "claim": "\"The state cut what Ivory Homes pays the school trust at Overland, and Ivory has ties across Utah's boards and church land deals.\"",
+   "badge": "Partly verified",
+   "points": [
+    "<b>Confirmed:</b> the Trust Lands board voted unanimously on March 21, 2024 to lower the school trust's share at Overland through 2027, to 7% for mid-size lots and 6% for townhomes and small lots (board memo and minutes, read on rendered pages).",
+    "<b>Confirmed, and more than the tip said:</b> the board's June 18, 2026 memo says the agreement was also amended by a June 29, 2020 letter agreement that lowered the payments. We did not find that letter agreement in the board packets we checked.",
+    "<b>Confirmed:</b> the board voted unanimously on June 18, 2026 to let Ivory sell Overland's commercial land early. Eagle Mountain later adopted a sales tax increment area for the Smith's center there.",
+    "<b>Confirmed:</b> Clark Ivory was confirmed to the Utah Housing Corporation board in 2026 (Senate Journal). He was a University of Utah trustee from 2007 to 2014. He was named a director of the Salt Lake branch of the Federal Reserve in 2006.",
+    "<b>Confirmed:</b> Salt Lake City heard fee waivers for Ivory University House in 2023, in exchange for an equal value of scholarships for city residents (council records). The dollar amount was not found.",
+    "<b>Corrected:</b> the tip put \"sold\" in quote marks about Ellis Ivory handing the company to Clark. A University of Utah profile says he sold it to Clark in 2000.",
+    "<b>Not confirmed:</b> that Clark Ivory chaired the Fed's Salt Lake branch board. The title appears in a university profile but not in Fed records we found.",
+    "<b>Not found:</b> a 1992 Bountiful lots story and the quote the tip gave for it. We are not using it."
+   ],
+   "link": "https://weber-county-hive.github.io/followthedeed/weber-hive-ivory-overland.html",
+   "linkText": "Read the case file →",
+   "came": "Follow the Deed Case 07 posted Nov. 19, 2026"
+  },
   {
    "id": "eagle-mountain-sponsor-agreement",
    "date": "Oct. 24, 2026",
