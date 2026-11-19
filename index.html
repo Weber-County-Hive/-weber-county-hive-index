@@ -372,7 +372,7 @@
     </h1>
     <p class="hive-sub">Every investigation, docket, and interactive built by The Weber County Hive — one place to find any of it.</p>
     <p class="hive-sub" style="font-weight:700;margin-top:6px">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</p>
-    <div class="hl-dates">Posted Aug. 25, 2026 · Updated Nov. 17, 2026 · Call number HL 000.00</div>
+    <div class="hl-dates">Posted Aug. 25, 2026 · Updated Nov. 18, 2026 · Call number HL 000.00</div>
   </div>
 <div class="hl-ww"><div class="hl-where"><div class="hl-where-h"><div class="hl-lbl">WHERE</div><div class="pl">Utah — statewide, with Weber County at home</div></div><div class="hl-who"><div class="hl-who-h">WHO</div><ul><li><b>The Weber County Hive</b> — Weber County government, elections, money and development</li><li><b>Utah Hive Politics</b> — the statewide work: the Legislature, state boards and other counties</li><li><b>Every Hive project</b> — shelved below by subject; each card opens that project's own index</li><li><b>Readers</b> — <a href="tips.html">tips and comments we checked</a>; tipster names are never published</li></ul></div></div></div>
 
@@ -381,24 +381,21 @@
       <input type="search" id="hive-search" placeholder="Search projects, case files or a call number — try Meta, PID, Schultz, UP 200.02" aria-label="Search projects and case files">
       <span class="search-count" id="search-count"></span>
     </div>
+    <p style="text-align:center;margin:-22px auto 30px;font-family:'Inter',sans-serif;font-size:1rem"><a id="google-all" href="https://www.google.com/search?q=site%3Aweber-county-hive.github.io+OR+site%3Awebercountyhive-coder.github.io" target="_blank" rel="noopener" style="color:#8a6d1f;font-weight:600">Search every Hive page on Google &rarr;</a> <span style="color:#6b6455;font-size:.9rem">(Google can take a few weeks to add new pages)</span></p>
     <p id="hl-callhit" style="display:none;max-width:620px;margin:-28px auto 32px;font-family:'Inter',sans-serif;font-size:1rem;background:#faf7ef;border:1px solid #ddd6c4;border-left:5px solid #d4af37;border-radius:6px;padding:10px 14px"></p>
 
-    <section style="margin:0 auto 40px;max-width:900px;background:var(--hive-dark);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;">
-      <div style="color:#efe6cc;max-width:560px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:#c9a96a;text-transform:uppercase;">Reader tips</div>
-        <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin:4px 0;">Tips and comments we checked</div>
-        <div style="font-size:.95rem;color:#d9ccaa;">What readers sent, what we checked, and what held up. Tipster names are never published.</div>
-      </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="tips.html" style="background:var(--gold);color:var(--hive-dark);font-family:'Inter',sans-serif;font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none;">See the log →</a>
-        <a href="tips.html#send" style="border:2px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-weight:700;padding:10px 16px;border-radius:6px;text-decoration:none;">Send a tip</a>
-      </div>
-    </section>
-        <section class="tm-wrap" id="tips-map">
-      <h2>Where the tips point</h2>
-      <p class="tm-dek">Readers send tips, and people post claims in public. Here is where each one was about, what we checked, and what came of it.</p>
-      <div id="tips-map-root"><noscript>See the full list on the <a href="tips.html">tips log</a>.</noscript></div>
-    </section>
+    <section id="start-here" style="max-width:900px;margin:0 auto 40px;background:#fff;border:2px solid #1a1508;border-top:6px solid #d4af37;border-radius:10px;padding:22px 24px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:#8a6d1f;text-transform:uppercase">New here? Start here</div>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.7rem;margin:4px 0 6px">What do you want to know?</h2>
+<p style="font-size:1.05rem;margin:0 0 16px">Pick a door. Each one takes you to the right shelf, so you don't need to know any project names.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+<a href="#shelf-people" style="display:block;text-decoration:none;color:#1a1508;background:#faf7ef;border:1px solid #ddd6c4;border-left:6px solid #3a4a2a;border-radius:8px;padding:14px 16px"><b style="font-size:1.15rem">Look up a person</b><br><span style="font-size:.95rem">Lawmakers, county officials, and the families and firms connected to them</span></a>
+<a href="#shelf-money" style="display:block;text-decoration:none;color:#1a1508;background:#faf7ef;border:1px solid #ddd6c4;border-left:6px solid #5c2e5c;border-radius:8px;padding:14px 16px"><b style="font-size:1.15rem">Follow the money</b><br><span style="font-size:.95rem">Who paid which candidate or PAC, and where the money went</span></a>
+<a href="#shelf-land" style="display:block;text-decoration:none;color:#1a1508;background:#faf7ef;border:1px solid #ddd6c4;border-left:6px solid #1f4d6b;border-radius:8px;padding:14px 16px"><b style="font-size:1.15rem">What's being built near me</b><br><span style="font-size:.95rem">Developments, PIDs, water and land deals</span></a>
+<a href="#shelf-legislature" style="display:block;text-decoration:none;color:#1a1508;background:#faf7ef;border:1px solid #ddd6c4;border-left:6px solid #1f4d2f;border-radius:8px;padding:14px 16px"><b style="font-size:1.15rem">What the Legislature did</b><br><span style="font-size:.95rem">Bills, votes, committees and taxes</span></a>
+<a href="#shelf-history" style="display:block;text-decoration:none;color:#1a1508;background:#faf7ef;border:1px solid #ddd6c4;border-left:6px solid #115e59;border-radius:8px;padding:14px 16px"><b style="font-size:1.15rem">How we got here</b><br><span style="font-size:.95rem">The history behind today's decisions, and how we traced each case</span></a>
+</div></section>
+
 <section class="latest" id="latest">
       <div class="shelf-head"><h2>Latest case files</h2><span class="shelf-note">NEWEST FIRST</span></div>
       <div class="latest-grid" id="latest-grid"></div>
@@ -414,19 +411,39 @@
 
     <div id="shelves"></div>
     <p class="no-results" id="no-results">Nothing matches that search. Try a shorter word.</p>
+
+<div style="margin-top:48px"></div>
+<section style="margin:0 auto 40px;max-width:900px;background:var(--hive-dark);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;">
+      <div style="color:#efe6cc;max-width:560px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:#c9a96a;text-transform:uppercase;">Reader tips</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin:4px 0;">Tips and comments we checked</div>
+        <div style="font-size:.95rem;color:#d9ccaa;">What readers sent, what we checked, and what held up. Tipster names are never published.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="tips.html" style="background:var(--gold);color:var(--hive-dark);font-family:'Inter',sans-serif;font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none;">See the log →</a>
+        <a href="tips.html#send" style="border:2px solid var(--gold);color:var(--gold);font-family:'Inter',sans-serif;font-weight:700;padding:10px 16px;border-radius:6px;text-decoration:none;">Send a tip</a>
+      </div>
+    </section>
+        <section class="tm-wrap" id="tips-map">
+      <h2>Where the tips point</h2>
+      <p class="tm-dek">Readers send tips, and people post claims in public. Here is where each one was about, what we checked, and what came of it.</p>
+      <div id="tips-map-root"><noscript>See the full list on the <a href="tips.html">tips log</a>.</noscript></div>
+    </section>
   </div>
 
 <div class="hl-shelfwrap"><div class="in"><div id="hive-shelf"></div></div></div>
 <div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group. We report public records. You decide.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small" style="max-width:720px;margin-left:auto;margin-right:auto">Public records, primary sources, no speculation.</p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="index.html" style="color:#d4af37">Hive library</a> · <a href="https://webercountyhive.substack.com/" style="color:#d4af37">Read on Substack</a></p></div>
 
-<script src="weber-hive-master-data.js?v=15"></script>
+<script src="weber-hive-master-data.js?v=16"></script>
 <script>
 const SHELVES = [
-  { key:"money",       title:"Money & Elections",       note:"CAMPAIGNS, PACS, DONORS" },
-  { key:"legislature", title:"The Legislature",         note:"BILLS, COMMITTEES, LAWMAKERS, TAXES" },
-  { key:"land",        title:"Land, Water & Energy",    note:"DEVELOPMENT, THE LAKE, DATA CENTERS" },
-  { key:"oversight",   title:"Oversight & Power",       note:"WHO DECIDES, AND WHO CHECKS THEM" },
-  { key:"life",        title:"Everyday Life & Basics",  note:"SCHOOLS, SURVEILLANCE, HOW IT ALL WORKS" }
+  { key:"money",       title:"Money & Elections",          note:"CAMPAIGNS, PACS, DONORS, BALLOT FIGHTS" },
+  { key:"people",      title:"People & Pedigrees",         note:"WHO HOLDS POWER, AND HOW THEY'RE CONNECTED" },
+  { key:"legislature", title:"The Legislature",            note:"BILLS, COMMITTEES, VOTES, TAXES" },
+  { key:"land",        title:"Land, Water & Energy",       note:"DEVELOPMENT, THE LAKE, DATA CENTERS" },
+  { key:"oversight",   title:"Oversight & Power",          note:"WHO DECIDES, WHO CHECKS THEM, AND WHAT THEY WATCH" },
+  { key:"history",     title:"How We Got Here",            note:"THE HISTORY, THE TRAIL, AND THE BASICS" },
+  { key:"hive",        title:"From the Hive",              note:"NEWSLETTER, ESSAYS, PICTURES, CALENDAR" }
 ];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function bee(color, id){
@@ -471,23 +488,54 @@ if (!latestCards.length) document.getElementById('latest').style.display = 'none
 const shelvesEl = document.getElementById('shelves');
 const repoCards = [];
 const shelfEls = [];
+const COMBINE = [
+  { title:"Utah Legislators", group:"people", color:"#2c3e5c", members:["Utah House","Utah Senators"], desc:"One profile per lawmaker: committee seats, voting record, donors and disclosed conflicts. House and Senate together." },
+  { title:"The 2026 Election", group:"money", color:"#1f5a8a", members:["Candidates 2026","Voter Quick Scan 2026"], desc:"Every 2026 race we covered: candidate case files, campaign money and the ballot flip cards." },
+  { title:"PAC Money", group:"money", color:"#5c2e5c", members:["PAC Money-Flow Ledger","PAC"], desc:"Who runs Utah's PACs, who funds them, and where the money goes, with the money-flow chart and numbered case files." },
+  { title:"Great Salt Lake", group:"land", color:"#1f6b7a", members:["Great Salt Lake","GSL-Votes"], desc:"The fight over the lake's future, and how each lawmaker voted on lake and water bills." },
+  { title:"Utah Counties", group:"oversight", color:"#4a3f2a", members:["County Watch","County Officials"], desc:"County-by-county coverage across Utah: the deals and decisions, and the officials who made them." },
+  { title:"The Sunday Buzz", group:"hive", color:"#b8860b", members:["The Sunday Buzz","Utah Hive News Spotlights"], desc:"The weekly recap of every story and case file, plus short spotlights on local news from towns across Utah." },
+  { title:"Bills", group:"legislature", color:"#1f4d2f", members:["Bill-Tracker","Bait and Switch"], desc:"" },
+  { title:"Hive Pictures", group:"hive", color:"#7a4a8a", members:["Graphics Library","Drawn From the Record"], desc:"" },
+  { title:"Challenging Government", group:"oversight", color:"#6b2f2f", members:["Referendums","Government in Court"], desc:"" },
+  { title:"Who's Behind It", group:"people", color:"#3d5a40", members:["Follow the Deed","Both Sides of the Table"], desc:"" },
+  { title:"Accountability Checks", group:"oversight", color:"#2f4a6b", members:["Transparency","Audits"], desc:"" },
+  { title:"Utah Maps", group:"land", color:"#2f6b3a", members:["Utah Maps","Developments"], desc:"Interactive maps of public money and land decisions, including the Weber County developments map. Every pin links to the record." }
+];
+const SHORT = {"Political Pedigrees": "Family trees of Utah power: office, lobbying and staff jobs passed between relatives.", "Utah Legislators": "One profile per lawmaker: committees, votes, donors and conflicts, House and Senate.", "Who's Behind It": "Tracing the LLCs, agents and firms behind Utah land and projects.", "The 2026 Election": "Every 2026 race we covered: candidate money and the ballot flip cards.", "PAC Money": "Who runs Utah's PACs, who funds them, and where the money goes.", "Bills": "Bills followed through the Legislature, including bills that changed along the way.", "Committees": "Who sits on which legislative committee, and what that overlap means.", "Taxation": "Utah tax bills and policy: what's changing and who it affects.", "PIDS-Utah": "What public infrastructure districts really cost homeowners.", "UIPA": "The Utah Inland Port Authority: its projects, the wetlands, and how it works.", "Data-Centers": "Utah's data center boom: the bills, the hearings and the big campuses.", "Great Salt Lake": "The fight over the lake, and how each lawmaker voted on water.", "Public Lands": "How public land, minerals and water rights change hands in Utah.", "Utah Maps": "Maps of public money and land decisions. Every pin links to the record.", "Nuclear Energy": "The laws, permits, boards and sites behind Utah's nuclear buildout.", "Accountability Checks": "Audits, and side-by-side checks of whether officials are held to the same standard.", "Unelected Power": "Appointed officials and how they got there, plus the party's postage program.", "Utah Counties": "County-by-county deals and decisions, and the officials who made them.", "Ogden City": "Ogden City government from the record: land sales, RDA areas, water rates.", "Challenging Government": "Referendums and court cases challenging Utah government decisions.", "Surveillance": "Flock cameras, plate readers and tracking tech: what's deployed and how it's used.", "Education": "School tech contracts, AI vendors and student data privacy, district by district.", "Then and Now": "The history behind today's decisions on water, land, towns and taxes.", "How We Found It": "The trail behind each case: where we looked and what each record showed.", "Politics for Beginners": "Plain-language explainers of political terms and how things work.", "The Sunday Buzz": "The weekly recap of every story, plus local news spotlights.", "Letters & Essays to the Collective": "Signed letters and essays, with every fact checked against the record.", "Hive Pictures": "Every Hive share card, chart and political cartoon in one place.", "Community Calendar": "Election dates, deadlines, public hearings and community events."};
+const inCombo = {}; COMBINE.forEach(c => c.members.forEach(m => inCombo[m] = c));
 SHELVES.forEach(sh => {
-  const items = REPOS.filter(r => (r.group || 'oversight') === sh.key);
+  let items = REPOS.filter(r => !inCombo[r.title] && (r.group || 'oversight') === sh.key);
+  COMBINE.filter(c => c.group === sh.key).forEach(c => items.push({ combo:c, title:c.title }));
+  const FIRST = ['Political Pedigrees','Utah Legislators',"Who's Behind It",'Bills','Accountability Checks','Unelected Power','Then and Now','How We Found It','Politics for Beginners','The 2026 Election','PAC Money'];
+  items.sort((a,b)=>{const x=FIRST.indexOf(a.title),y=FIRST.indexOf(b.title);return (x<0?99:x)-(y<0?99:y);});
   if (!items.length) return;
   const sec = document.createElement('section');
-  sec.className = 'shelf';
+  sec.className = 'shelf'; sec.id = 'shelf-' + sh.key;
   sec.innerHTML = `<div class="shelf-head"><h2>${sh.title}</h2><span class="shelf-note">${sh.note}</span></div><div class="comb"></div>`;
   const grid = sec.querySelector('.comb');
   items.forEach(r => {
     const i = repoCards.length;
-    const card = document.createElement('a');
-    card.className = 'card';
-    card.href = r.url;
-    card.innerHTML = `
+    let card;
+    if (r.combo) {
+      const c = r.combo, mem = c.members.map(t => REPOS.find(x => x.title === t)).filter(Boolean);
+      card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-top"><div class="card-badge">${bee(c.color, i)}</div><h3>${esc(c.title)}</h3></div>
+        <p>${esc(SHORT[c.title]||c.desc)}</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">${mem.map(m => `<a class="card-link" href="${m.url}" style="text-decoration:none">Open ${esc(m.title)} →</a>`).join('')}</div>`;
+      card.dataset.hay = [c.title, c.desc, ...mem.map(m => m.title + ' ' + m.desc)].join(' ').toLowerCase();
+    } else {
+      card = document.createElement('a');
+      card.className = 'card';
+      card.href = r.url;
+      card.innerHTML = `
       <div class="card-top"><div class="card-badge">${bee(r.color, i)}</div><h3>${esc(r.title)}</h3></div>
-      <p>${esc(r.desc)}</p>
+      <p>${esc(SHORT[r.title]||r.desc)}</p>
       <span class="card-link">Open project →</span>`;
-    card.dataset.hay = [r.title, r.desc].join(' ').toLowerCase();
+      card.dataset.hay = [r.title, r.desc].join(' ').toLowerCase();
+    }
     grid.appendChild(card);
     repoCards.push(card);
   });
@@ -520,6 +568,7 @@ function callHit(){
   const h=window.hiveCallLookup(input.value); el.style.display=h?'block':'none'; if(h) el.innerHTML=h.html;
 }
 input.addEventListener('input', runSearch);
+input.addEventListener('input', function(){var g=document.getElementById('google-all');if(g){var q=input.value.trim();g.href='https://www.google.com/search?q='+encodeURIComponent((q?q+' ':'')+'(site:weber-county-hive.github.io OR site:webercountyhive-coder.github.io)');}});
 input.addEventListener('input', callHit);
 const fromUrl = new URLSearchParams(location.search).get('q'); if(fromUrl){ input.value = fromUrl; }
 runSearch();

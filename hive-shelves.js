@@ -38,5 +38,6 @@ window.HIVE_SHELVES = [
   { prefix: "TR", name: "Transparency", url: "https://weber-county-hive.github.io/Transparency/index.html" },
   { prefix: "LG", name: "The Ledger", url: "https://weber-county-hive.github.io/-weber-county-hive-ledger/index.html" },
   { prefix: "DV", name: "Developments", url: "https://weber-county-hive.github.io/developments/index.html" },
-  { prefix: "PP", name: "Political Pedigrees", url: "https://webercountyhive-coder.github.io/-Political-Pedigrees/index.html" }
+  { prefix: "PP", name: "Political Pedigrees", url: "https://webercountyhive-coder.github.io/-Political-Pedigrees/index.html" },
+  { prefix: "HW", name: "How We Found It", url: "https://weber-county-hive.github.io/HOW-WE-FOUND-IT/index.html" }
 ];
